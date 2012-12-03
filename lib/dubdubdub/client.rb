@@ -1,5 +1,6 @@
 require 'net/http'
 require 'nokogiri'
+require 'mechanize'
 
 class DubDubDub::Client
   attr_accessor :proxy_host, :proxy_port, :proxy_user, :proxy_password
@@ -53,6 +54,14 @@ class DubDubDub::Client
     RestClient::Resource.new(url, options)
   end
 
+  # Returns a Mechanize instance (agent)
+  def mechanize
+    agent = Mechanize.new
+    agent.set_proxy(proxy_host, proxy_port) if proxy?
+
+    agent
+  end
+
   # Perform a GET request
   def get(url, *args)
     rest_client_resource(url).get(*args)
@@ -68,11 +77,16 @@ class DubDubDub::Client
     rest_client_resource(url).delete(*args)
   end
 
-  # Helper method to crawl by using a GET request
+  # Helper method to crawl by using a GET request via RestClient
   def crawl(url, *args)
     response = get(url, *args)
 
     Nokogiri::HTML(response.body)
+  end
+
+  # Helper method to browse by using a GET request via Mechanize
+  def browse(url, *args)
+    mechanize.get(url, *args)
   end
 
   # Follow a url to the end until it can no longer go any further

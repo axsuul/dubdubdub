@@ -3,6 +3,7 @@
 require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 require 'rest-client'
 require 'nokogiri'
+require 'mechanize'
 
 describe DubDubDub do
   let(:www) { DubDubDub.new }
@@ -42,6 +43,19 @@ describe DubDubDub do
     end
   end
 
+  describe '#mechanize' do
+    it "returns a Mechanize agent" do
+      www.mechanize.should be_a Mechanize
+    end
+
+    it "returns a proxied Mechanize agent if proxied" do
+      www.proxy = "localhost:8000"
+      agent = www.mechanize
+      agent.proxy_addr.should == "localhost"
+      agent.proxy_port.should == 8000
+    end
+  end
+
   describe '#get' do
     it "makes a GET request using RestClient and returns a response", vcr: { cassette_name: "get/basic", record: :once } do
       response = www.get "http://www.google.com"
@@ -63,6 +77,13 @@ describe DubDubDub do
     it "performs a GET request and returns a Nokogiri HTML document", vcr: { cassette_name: "crawl/basic", record: :once } do
       html = www.crawl "http://www.google.com"
       html.should be_a Nokogiri::HTML::Document
+    end
+  end
+
+  describe '#browse' do
+    it "performs a GET request with Mechanize and returns a Mechanize::Page", vcr: { cassette_name: "browse/basic", record: :once } do
+      page = www.browse "http://www.google.com"
+      page.should be_a Mechanize::Page
     end
   end
 
