@@ -1,5 +1,3 @@
-# require 'dubdubdub/client'
-
 class DubDubDub
   # Version
   VERSION = "0.0.1"
@@ -20,5 +18,5 @@ class DubDubDub
   end
 end
 
-require 'dubdubdub/exceptions'
-require 'dubdubdub/client'
+require File.expand_path(File.dirname(__FILE__) + '/dubdubdub/exceptions')
+require File.expand_path(File.dirname(__FILE__) + '/dubdubdub/client')
