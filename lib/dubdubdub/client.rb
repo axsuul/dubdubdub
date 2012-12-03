@@ -45,6 +45,29 @@ class DubDubDub::Client
     http
   end
 
+  # Returns a RestClient::Resource
+  def rest_client_resource(url)
+    options = {}
+    options[:proxy] = proxy if proxy?
+
+    RestClient::Resource.new(url, options)
+  end
+
+  # Perform a GET request
+  def get(url, *args)
+    rest_client_resource(url).get(*args)
+  end
+
+  # Perform a POST request
+  def post(url, *args)
+    rest_client_resource(url).post(*args)
+  end
+
+  # Perform a DELETE request
+  def delete(url, *args)
+    rest_client_resource(url).delete(*args)
+  end
+
   # Follow a url to the end until it can no longer go any further
   # Even if it times out, it will return the url that it times out on!
   def follow_url(url, options = {}, &block)

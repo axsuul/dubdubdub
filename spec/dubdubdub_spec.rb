@@ -1,6 +1,7 @@
 # encoding: utf-8
 
 require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
+require 'rest-client'
 
 describe DubDubDub do
   let(:www) { DubDubDub.new }
@@ -27,11 +28,33 @@ describe DubDubDub do
       www.proxy_host.should == "203.131.212.166"
       www.proxy_port.should == 80
     end
+
+    it "does not pass the method to client if that method doesn't exist within the client" do
+      www = DubDubDub.new
+      lambda { www.some_method_that_doesnt_exist }.should raise_error(NameError)
+    end
   end
 
   describe '#client' do
     it "returns the client" do
       www.client.should be_a DubDubDub::Client
+    end
+  end
+
+  describe '#get' do
+    it "makes a GET request using RestClient and returns a response", vcr: { cassette_name: "get/basic", record: :once } do
+      response = www.get "http://www.google.com"
+      response.should be_a RestClient::Response
+    end
+
+    it "works with params", vcr: { cassette_name: "get/params", record: :once } do
+      response = www.get "http://www.google.com", params: { foo: "bar" }
+      response.should be_a RestClient::Response
+    end
+
+    it "works with a proxy", vcr: { cassette_name: "get/proxy", record: :once } do
+      www.proxy = "203.131.212.166"
+      response = www.get "http://www.google.com"
     end
   end
 

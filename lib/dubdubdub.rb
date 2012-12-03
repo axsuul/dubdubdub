@@ -13,7 +13,7 @@ class DubDubDub
     if @client.respond_to?(method)
       @client.send(method, *args, &block)
     else
-      send(method, *args, &block)
+      super
     end
   end
 end
