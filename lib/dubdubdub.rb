@@ -6,22 +6,19 @@ class DubDubDub
 
   attr_accessor :client
 
-  def initialize
-    @client = DubDubDub::Client.new
+  def initialize(options = {})
+    @client = DubDubDub::Client.new(options)
   end
 
-  def browse
-
-  end
-
-  def crawl
-
-  end
-
-  def follow_url(*args, &block)
-    @client.follow_url(*args, &block)
+  # Redirect methods to client
+  def method_missing(method, *args, &block)
+    if @client.respond_to?(method)
+      @client.send(method, *args, &block)
+    else
+      send(method, *args, &block)
+    end
   end
 end
 
-require 'dubdubdub/error'
+require 'dubdubdub/exceptions'
 require 'dubdubdub/client'

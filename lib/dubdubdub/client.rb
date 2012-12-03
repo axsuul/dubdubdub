@@ -1,15 +1,44 @@
 require 'open-uri'
+require 'net/http'
 
 class DubDubDub::Client
-  def initialize
-    # TODO
+  attr_accessor :proxy_host, :proxy_port, :proxy_user, :proxy_password
+
+  def initialize(options = {})
+    self.proxy = options[:proxy] if options[:proxy]
+  end
+
+  def proxy_port=(port)
+    @proxy_port = port.to_i
+  end
+
+  def proxy=(url)
+    host, port = url.split(":")
+
+    port = 80 unless port
+    self.proxy_host = host
+    self.proxy_port = port
+  end
+
+  def proxy
+    "#{proxy_host}:#{proxy_port}"
+  end
+
+  def proxy?
+    !!proxy
   end
 
   # Returns a Net::HTTP object
   def net_http(uri)
     raise ArgumentError unless uri.is_a? URI::HTTP
 
-    http = Net::HTTP.new(uri.host, uri.port)
+    net_http_class = if proxy?
+      Net::HTTP.Proxy(proxy_host, proxy_port, proxy_user, proxy_password)
+    else
+      Net::HTTP
+    end
+
+    http = net_http_class.new(uri.host, uri.port)
     http.verify_mode = OpenSSL::SSL::VERIFY_NONE  # ssl certificate doesn't need to be verified, otherwise a OpenSSL::SSL::SSLError might get thrown
     http.use_ssl = true if uri.scheme == "https"
 
@@ -70,6 +99,7 @@ class DubDubDub::Client
           case response
           when Net::HTTPSuccess then at_base = true
           when Net::HTTPRedirection then url = response['location']
+          when Net::HTTPForbidden then raise DubDubDub::Forbidden
           # Couldn't resolve, just return url
           else at_base = true
           end if response
