@@ -1,0 +1,36 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://htxt.it/BqFO
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 403
+      message: Forbidden
+    headers:
+      date:
+      - Mon, 03 Dec 2012 07:57:14 GMT
+      server:
+      - Apache
+      vary:
+      - Accept-Encoding
+      content-length:
+      - '9'
+      connection:
+      - close
+      content-type:
+      - text/html; charset=iso-8859-1
+    body:
+      encoding: US-ASCII
+      string: forbidden
+    http_version: '1.1'
+  recorded_at: Mon, 03 Dec 2012 07:57:14 GMT
+recorded_with: VCR 2.3.0

@@ -1,0 +1,376 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.youtube.com/watch?v=DM58Zdk7el0&feature=youtube_gdata_player
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      date:
+      - Mon, 03 Dec 2012 07:57:13 GMT
+      server:
+      - gwiseguy/2.0
+      x-content-type-options:
+      - nosniff
+      set-cookie:
+      - use_hitbox=d5c5516c3379125f43aa0d495d100d6ddAEAAAAw; path=/; domain=.youtube.com
+      - VISITOR_INFO1_LIVE=H4c6aHUV_0w; path=/; domain=.youtube.com; expires=Wed,
+        31-Jul-2013 07:57:13 GMT
+      expires:
+      - Tue, 27 Apr 1971 19:44:06 EST
+      cache-control:
+      - no-cache
+      p3p:
+      - CP="This is not a P3P policy! See http://support.google.com/accounts/bin/answer.py?answer=151657&hl=en-US
+        for more info."
+      content-type:
+      - text/html; charset=utf-8
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      connection:
+      - close
+    body:
+      encoding: US-ASCII
+      string: ! "<!DOCTYPE html>\n  <html lang=\"en\" dir=\"ltr\" >\n\n<head>\n      <script>\nvar
+        yt = yt || {};yt.timing = yt.timing || {};yt.timing.tick = function() {};yt.timing.info
+        = function() {};    </script>\n\n<title>YouTube</title><link rel=\"search\"
+        type=\"application/opensearchdescription+xml\" href=\"http://www.youtube.com/opensearch?locale=en_US\"
+        title=\"YouTube Video Search\"><link rel=\"icon\" href=\"https://s.ytimg.com/yts/img/favicon-vfldLzJxy.ico\"
+        type=\"image/x-icon\"><link rel=\"shortcut icon\" href=\"https://s.ytimg.com/yts/img/favicon-vfldLzJxy.ico\"
+        type=\"image/x-icon\">   <link rel=\"icon\" href=\"//s.ytimg.com/yts/img/favicon_32-vflWoMFGx.png\"
+        sizes=\"32x32\"><link rel=\"alternate\" media=\"handheld\" href=\"http://m.youtube.com/watch?feature=youtube_gdata_player&amp;v=DM58Zdk7el0&amp;desktop_uri=%2Fwatch%3Fv%3DDM58Zdk7el0%26feature%3Dyoutube_gdata_player\"><link
+        rel=\"alternate\" media=\"only screen and (max-width: 640px)\" href=\"http://m.youtube.com/watch?feature=youtube_gdata_player&amp;v=DM58Zdk7el0&amp;desktop_uri=%2Fwatch%3Fv%3DDM58Zdk7el0%26feature%3Dyoutube_gdata_player\">
+        \ <link id=\"css-2981592957\" rel=\"stylesheet\" href=\"https://s.ytimg.com/yts/cssbin/www-core-vflspPKkA.css\">\n
+        \ \n</head>\n<!-- machid: pcHR2SjdPakI0MkFoc0hkekxvLThhUmltMjNHeEEyLTNtRFZDd2drYXZKNU9zZmEtRzI5ZnhB
+        -->\n\n\n\n  <body id=\"\" class=\"date-20121130 en_US ltr   ytg-old-clearfix
+        guide-feed-v2 \" dir=\"ltr\">\n\n  <div id=\"body-container\">\n    <form
+        name=\"logoutForm\" method=\"POST\" action=\"/logout\">\n      <input type=\"hidden\"
+        name=\"action_logout\" value=\"1\">\n    </form>\n\n\n\n    \n\n    <!-- begin
+        page -->\n      <div id=\"page\" class=\"  watch \">\n          \n    \n  <div
+        id=\"masthead-container\">\n    <!-- begin masthead -->\n            <div
+        id=\"masthead\" class=\"\" dir=\"ltr\">\n          <a id=\"logo-container\"
+        href=\"/\" title=\"YouTube home\">\n    <img id=\"logo\" src=\"//s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif\"
+        alt=\"YouTube home\">\n  </a>\n\n\n    <div id=\"masthead-user-bar-container\"
+        >\n      <div id=\"masthead-user-bar\">\n        <div id=\"masthead-user\">\n
+        \         <div id=\"masthead-user-display\"><span id=\"masthead-user-wrapper\"><button
+        href=\"https://accounts.google.com/ServiceLogin?passive=true&amp;continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26feature%3Dsign_in_button%26hl%3Den_US%26next%3D%252Fwatch%253Fv%253DDM58Zdk7el0%2526feature%253Dyoutube_gdata_player%26nomobiletemp%3D1&amp;uilel=3&amp;hl=en_US&amp;service=youtube\"
+        type=\"button\" id=\"masthead-user-button\" onclick=\";window.location.href=this.getAttribute(&#39;href&#39;);return
+        false;\" class=\" yt-uix-button yt-uix-button-text\"  role=\"button\"><span
+        class=\"yt-uix-button-content\">  <span id=\"masthead-user-image\">\n    <span
+        class=\"clip\">\n      <span class=\"clip-center\">\n          <img src=\"//s.ytimg.com/yts/img/silhouette48-vflLdu7sh.png\"
+        alt=\"\">\n        <span class=\"vertical-center\"></span>\n      </span>\n
+        \   </span>\n  </span>\n  <span class=\"masthead-user-username\">Sign In</span>\n
+        </span></button></span></div>\n        </div>\n      </div>\n    </div>\n
+        \   <div id=\"masthead-search-bar-container\" >\n      <div id=\"masthead-search-bar\">\n<div
+        id=\"masthead-nav\"><a href=\"/videos?feature=mh\" >Browse</a><span class=\"masthead-link-separator\">|</span><a
+        href=\"/movies?feature=mh\" >Movies</a>                <span class=\"masthead-link-separator\">|</span><a
+        id=\"masthead-upload-link\" class=\"\" data-upsell=\"upload\" href=\"//www.youtube.com/my_videos_upload\">Upload</a></div>
+        \       \n\n\n  <form id=\"masthead-search\" class=\"search-form consolidated-form\"
+        action=\"/results\" onsubmit=\"if (_gel(&#39;masthead-search-term&#39;).value
+        == &#39;&#39;) return false;\">\n<button class=\"search-btn-compontent search-button
+        yt-uix-button yt-uix-button-default\" onclick=\"if (_gel(&#39;masthead-search-term&#39;).value
+        == &#39;&#39;) return false; _gel(&#39;masthead-search&#39;).submit(); return
+        false;;return true;\" type=\"submit\" id=\"search-btn\" dir=\"ltr\" tabindex=\"2\"
+        \ role=\"button\"><span class=\"yt-uix-button-content\">Search </span></button><div
+        id=\"masthead-search-terms\" class=\"masthead-search-terms-border\" dir=\"ltr\"><label><input
+        id=\"masthead-search-term\" autocomplete=\"off\" class=\"search-term\" name=\"search_query\"
+        value=\"\" type=\"text\" tabindex=\"1\" onkeyup=\"goog.i18n.bidi.setDirAttribute(event,this)\"
+        \ title=\"Search\"></label></div>  </form>\n\n      </div>\n    </div>\n  </div>\n
+        \ \n  \n\n\n\n    \n    <!-- end masthead -->\n  </div>\n  <div id=\"content-container\">\n
+        \   <!-- begin content -->\n    <div id=\"content\">\n      <div id=\"watch-container\"
+        >\n  \n  <div id=\"watch-headline-container\">\n    <div id=\"watch-headline\"
+        class=\"watch-headline\">\n      <h1 id=\"watch-headline-title\">\n      </h1>\n
+        \     <div id=\"watch-headline-user-info\">\n      </div>\n    </div>\n  </div>\n
+        \ <div id=\"watch-video-container\">\n    <div id=\"watch-video\">\n      <div
+        id=\"watch-player\" class=\"unavailable-player\">\n        \n    <div id=\"watch-player-unavailable\">\n
+        \   <div id=\"watch-player-unavailable-message\">\n      <div id=\"watch-player-unavailable-icon-container\">\n
+        \         <img src=\"//s.ytimg.com/yts/img/meh-vflQF1ybI.png\" alt=\"This
+        video is unavailable\"/>\n      </div>\n      <div id=\"watch-player-unavailable-message-container\">\n
+        \         <div id=\"unavailable-message\" class=\"\">    <span class=\"yt-alert-vertical-trick\"></span>\n
+        \   <div class=\"yt-alert-message\">\n            This video is private.\n
+        \   </div>\n</div>\n          <div id=\"unavailable-submessage\" class=\"watch-unavailable-submessage\">
+        \   <span class=\"yt-alert-vertical-trick\"></span>\n    <div class=\"yt-alert-message\">\n
+        \           If the owner of this video has granted you access, please <a href=\"https://accounts.google.com/ServiceLogin?passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26feature%3Dprivate_video%26hl%3Den_US%26next%3D%252Fwatch%253Fv%253DDM58Zdk7el0%2526feature%253Dyoutube_gdata_player%26nomobiletemp%3D1&uilel=3&hl=en_US&service=youtube\">log
+        in</a>.\n    </div>\n</div>\n      </div>\n    </div>\n  </div>\n\n\n      </div>\n
+        \   </div>\n  </div>\n  <div id=\"watch-main-container\">\n    <div id=\"watch-main\">\n
+        \     <div id=\"watch-panel\">\n        <div id=\"watch-actions\">\n            <div
+        id=\"watch-actions-right\">\n    <button disabled=\"True\" onclick=\";return
+        false;\" type=\"button\" id=\"watch-insight-button\" class=\"yt-uix-tooltip
+        yt-uix-tooltip-reverse master-sprite yt-uix-button yt-uix-button-default yt-uix-button-empty\"
+        \ role=\"button\"><span class=\"yt-uix-button-icon-wrapper\"><img class=\"yt-uix-button-icon
+        yt-uix-button-icon-watch-insight\" src=\"//s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif\"
+        alt=\"\"><span class=\"yt-uix-button-valign\"></span></span></button>\n  </div>\n\n<span
+        class=\"yt-uix-button-group\"><button disabled=\"True\" onclick=\";return
+        false;\" type=\"button\" class=\"master-sprite start yt-uix-tooltip-reverse
+        yt-uix-button yt-uix-button-default\" id=\"watch-like\"  role=\"button\"><span
+        class=\"yt-uix-button-icon-wrapper\"><img class=\"yt-uix-button-icon yt-uix-button-icon-watch-like\"
+        src=\"//s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif\" alt=\"\"><span class=\"yt-uix-button-valign\"></span></span><span
+        class=\"yt-uix-button-content\">Like </span></button><button disabled=\"True\"
+        onclick=\";return false;\" type=\"button\" class=\"master-sprite end yt-uix-tooltip-reverse
+        yt-uix-button yt-uix-button-default yt-uix-button-empty\" id=\"watch-unlike\"
+        \ role=\"button\"><span class=\"yt-uix-button-icon-wrapper\"><img class=\"yt-uix-button-icon
+        yt-uix-button-icon-watch-unlike\" src=\"//s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif\"
+        alt=\"\"><span class=\"yt-uix-button-valign\"></span></span></button></span>\n
+        \ <button disabled=\"True\" type=\"button\" class=\"addto-button watch show-label
+        yt-uix-button yt-uix-button-default\" onclick=\";return false;\"  role=\"button\"><span
+        class=\"yt-uix-button-icon-wrapper\"><img class=\"yt-uix-button-icon yt-uix-button-icon-addto\"
+        src=\"//s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif\" alt=\"\"><span class=\"yt-uix-button-valign\"></span></span><span
+        class=\"yt-uix-button-content\"><span class=\"addto-label\">Add to</span>
+        </span></button>\n\n  <button disabled=\"True\" onclick=\";return false;\"
+        type=\"button\" class=\"yt-uix-tooltip-reverse yt-uix-button yt-uix-button-default\"
+        id=\"watch-share\"  role=\"button\"><span class=\"yt-uix-button-content\">Share
+        </span></button>\n  <button disabled=\"True\" onclick=\";return false;\" type=\"button\"
+        class=\"master-sprite yt-uix-tooltip-reverse yt-uix-button yt-uix-button-default
+        yt-uix-button-empty\" id=\"watch-flag\"  role=\"button\"><span class=\"yt-uix-button-icon-wrapper\"><img
+        class=\"yt-uix-button-icon yt-uix-button-icon-watch-flag\" src=\"//s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif\"
+        alt=\"\"><span class=\"yt-uix-button-valign\"></span></span></button>\n  <div
+        class=\"clear\"></div>\n\n        </div>\n      </div>\n      <div id=\"watch-sidebar\">\n
+        \         <div class=\"watch-sidebar-section\">\n    <div style=\"border-top:
+        solid 1px #ccc;\"></div>\n  </div>\n\n      </div>\n      <div class=\"clear\"></div>\n
+        \   </div>\n  </div>\n</div>\n\n    </div>\n    <!-- end content -->\n  </div>\n\n
+        \ <div id=\"footer-container\">\n          <div id=\"footer\">  <div class=\"yt-horizontal-rule
+        \"><span class=\"first\"></span><span class=\"second\"></span><span class=\"third\"></span></div>\n<div
+        id=\"footer-logo\"><a href=\"/\" title=\"YouTube home\"><img src=\"//s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif\"
+        alt=\"YouTube home\"></a><span id=\"footer-divider\"></span></div><div id=\"footer-main\"><ul
+        id=\"footer-links-primary\">    <li><a href=\"//support.google.com/youtube/?hl=en-US&amp;p=\">Help</a></li>\n
+        \ <li><a href=\"/t/about_youtube\">About</a></li>\n  <li><a href=\"/t/press\">Press
+        &amp; Blogs</a></li>\n  <li><a href=\"/t/copyright_center\">Copyright</a></li>\n
+        \ <li><a href=\"/creators\">Creators &amp; Partners</a></li>\n  <li><a href=\"/t/advertising_overview\">Advertising</a></li>\n
+        \ <li><a href=\"/dev\">Developers</a></li>\n</ul><ul id=\"footer-links-secondary\">
+        \ <li><a href=\"/t/terms\">Terms</a></li>\n  <li><a href=\"http://www.google.com/intl/en/policies/privacy/\">Privacy</a></li>\n
+        \ <li><a href=\"//support.google.com/youtube/bin/request.py?contact_type=abuse&amp;hl=en-US\">Safety</a></li>\n
+        \ <li><a href=\"//www.google.com/tools/feedback/intl/en/error.html\" onclick=\"return
+        yt.www.feedback.start(yt.getConfig('FEEDBACK_LOCALE_LANGUAGE'), yt.getConfig('FEEDBACK_LOCALE_EXTRAS'));\"
+        id=\"reportbug\">Send feedback</a></li>\n  <li><a href=\"/testtube\">Try something
+        new!</a></li>\n</ul>  <ul class=\"pickers yt-uix-button-group\" data-button-toggle-group=\"optional\">\n
+        \     <li>\nLanguage:\n          \n  <button type=\"button\" class=\" yt-uix-button
+        yt-uix-button-text\" onclick=\";return false;\" data-button-toggle=\"true\"
+        data-picker-position=\"footer\" data-button-menu-id=\"arrow-display\" data-picker-key=\"language\"
+        data-button-action=\"yt.www.picker.load\" role=\"button\"><span class=\"yt-uix-button-content\">
+        \ English\n </span><img class=\"yt-uix-button-arrow\" src=\"//s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif\"
+        alt=\"\"></button>\n\n\n      </li>\n      <li>\nLocation:\n          \n  <button
+        type=\"button\" class=\" yt-uix-button yt-uix-button-text\" onclick=\";return
+        false;\" data-button-toggle=\"true\" data-picker-position=\"footer\" data-button-menu-id=\"arrow-display\"
+        data-picker-key=\"country\" data-button-action=\"yt.www.picker.load\" role=\"button\"><span
+        class=\"yt-uix-button-content\">  Worldwide\n </span><img class=\"yt-uix-button-arrow\"
+        src=\"//s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif\" alt=\"\"></button>\n\n\n
+        \     </li>\n      <li>\nSafety:\n          \n  <button type=\"button\" class=\"
+        yt-uix-button yt-uix-button-text\" onclick=\";return false;\" data-button-toggle=\"true\"
+        data-picker-position=\"footer\" data-button-menu-id=\"arrow-display\" data-picker-key=\"safetymode\"
+        data-button-action=\"yt.www.picker.load\" role=\"button\"><span class=\"yt-uix-button-content\">Off\n
+        </span><img class=\"yt-uix-button-arrow\" src=\"//s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif\"
+        alt=\"\"></button>\n\n\n      </li>\n  </ul>\n      <div id=\"yt-picker-language-footer\"\n
+        \     class=\"yt-picker\"\n      style=\"display: none\"\n>\n      <p class=\"yt-spinner\">\n
+        \     <img src=\"//s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif\" class=\"yt-spinner-img\"
+        alt=\"Loading icon\">\n\nLoading...\n  </p>\n\n  </div>\n\n      <div id=\"yt-picker-country-footer\"\n
+        \     class=\"yt-picker\"\n      style=\"display: none\"\n>\n      <p class=\"yt-spinner\">\n
+        \     <img src=\"//s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif\" class=\"yt-spinner-img\"
+        alt=\"Loading icon\">\n\nLoading...\n  </p>\n\n  </div>\n\n      <div id=\"yt-picker-safetymode-footer\"\n
+        \     class=\"yt-picker\"\n      style=\"display: none\"\n>\n      <p class=\"yt-spinner\">\n
+        \     <img src=\"//s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif\" class=\"yt-spinner-img\"
+        alt=\"Loading icon\">\n\nLoading...\n  </p>\n\n  </div>\n\n</div>    \n</div>\n\n\n
+        \ </div>\n    \n\n\n\n  <div id=\"playlist-bar\" class=\"hid passive editable\"
+        data-video-url=\"/watch?v=&amp;feature=BFql&amp;playnext=1&amp;list=QL\" data-list-id=\"\"
+        data-list-type=\"QL\">\n    <div id=\"playlist-bar-bar-container\">\n      <div
+        id=\"playlist-bar-bar\">\n        <div class=\"yt-alert yt-alert-naked yt-alert-success
+        hid \" id=\"playlist-bar-notifications\">  <div class=\"yt-alert-icon\">\n
+        \   <img src=\"//s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif\" class=\"icon master-sprite\"
+        alt=\"Alert icon\">\n  </div>\n<div class=\"yt-alert-content\" role=\"alert\"></div></div>\n<span
+        id=\"playlist-bar-info\"><span class=\"playlist-bar-active playlist-bar-group\"><button
+        onclick=\";return false;\" title=\"Previous video\" type=\"button\" id=\"playlist-bar-prev-button\"
+        class=\"yt-uix-tooltip yt-uix-tooltip-masked  yt-uix-button yt-uix-button-default
+        yt-uix-tooltip yt-uix-button-empty\"  role=\"button\"><span class=\"yt-uix-button-icon-wrapper\"><img
+        class=\"yt-uix-button-icon yt-uix-button-icon-playlist-bar-prev\" src=\"//s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif\"
+        alt=\"Previous video\"><span class=\"yt-uix-button-valign\"></span></span></button><span
+        class=\"playlist-bar-count\"><span class=\"playing-index\">0</span> / <span
+        class=\"item-count\">0</span></span><button type=\"button\" class=\"yt-uix-tooltip
+        yt-uix-tooltip-masked  yt-uix-button yt-uix-button-default yt-uix-button-empty\"
+        onclick=\";return false;\" id=\"playlist-bar-next-button\"  role=\"button\"><span
+        class=\"yt-uix-button-icon-wrapper\"><img class=\"yt-uix-button-icon yt-uix-button-icon-playlist-bar-next\"
+        src=\"//s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif\" alt=\"\"><span class=\"yt-uix-button-valign\"></span></span></button></span><span
+        class=\"playlist-bar-active playlist-bar-group\"><button type=\"button\" class=\"yt-uix-tooltip
+        yt-uix-tooltip-masked  yt-uix-button yt-uix-button-default yt-uix-button-empty\"
+        onclick=\";return false;\" id=\"playlist-bar-autoplay-button\" data-button-toggle=\"true\"
+        role=\"button\"><span class=\"yt-uix-button-icon-wrapper\"><img class=\"yt-uix-button-icon
+        yt-uix-button-icon-playlist-bar-autoplay\" src=\"//s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif\"
+        alt=\"\"><span class=\"yt-uix-button-valign\"></span></span></button><button
+        type=\"button\" class=\"yt-uix-tooltip yt-uix-tooltip-masked  yt-uix-button
+        yt-uix-button-default yt-uix-button-empty\" onclick=\";return false;\" id=\"playlist-bar-shuffle-button\"
+        data-button-toggle=\"true\" role=\"button\"><span class=\"yt-uix-button-icon-wrapper\"><img
+        class=\"yt-uix-button-icon yt-uix-button-icon-playlist-bar-shuffle\" src=\"//s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif\"
+        alt=\"\"><span class=\"yt-uix-button-valign\"></span></span></button></span><span
+        class=\"playlist-bar-passive playlist-bar-group\"><button onclick=\";return
+        false;\" title=\"Play videos\" type=\"button\" id=\"playlist-bar-play-button\"
+        class=\"yt-uix-tooltip yt-uix-tooltip-masked  yt-uix-button yt-uix-button-default
+        yt-uix-tooltip yt-uix-button-empty\"  role=\"button\"><span class=\"yt-uix-button-icon-wrapper\"><img
+        class=\"yt-uix-button-icon yt-uix-button-icon-playlist-bar-play\" src=\"//s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif\"
+        alt=\"Play videos\"><span class=\"yt-uix-button-valign\"></span></span></button><span
+        class=\"playlist-bar-count\"><span class=\"item-count\">0</span></span></span><span
+        id=\"playlist-bar-title\" class=\"yt-uix-button-group\"><span class=\"playlist-title\">Unsaved
+        Playlist</span></span></span>\n        <a id=\"playlist-bar-lists-back\" href=\"#\">\nReturn
+        to active list\n        </a>\n\n<span id=\"playlist-bar-controls\"><span class=\"playlist-bar-group\"><button
+        type=\"button\" class=\"yt-uix-tooltip yt-uix-tooltip-masked  yt-uix-button
+        yt-uix-button-text yt-uix-button-empty\" onclick=\";return false;\" id=\"playlist-bar-toggle-button\"
+        \ role=\"button\"><span class=\"yt-uix-button-icon-wrapper\"><img class=\"yt-uix-button-icon
+        yt-uix-button-icon-playlist-bar-toggle\" src=\"//s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif\"
+        alt=\"\"><span class=\"yt-uix-button-valign\"></span></span></button></span><span
+        class=\"playlist-bar-group\"><button type=\"button\" class=\"yt-uix-tooltip
+        yt-uix-tooltip-masked yt-uix-button-reverse flip yt-uix-button yt-uix-button-text\"
+        onclick=\";return false;\" data-button-menu-id=\"playlist-bar-options-menu\"
+        data-button-has-sibling-menu=\"true\" role=\"button\"><span class=\"yt-uix-button-content\">Options
+        </span><img class=\"yt-uix-button-arrow\" src=\"//s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif\"
+        alt=\"\"></button></span></span>      </div>\n    </div>\n\n<div id=\"playlist-bar-tray-container\"><div
+        id=\"playlist-bar-tray\" class=\"yt-uix-slider yt-uix-slider-fluid\"><button
+        class=\"yt-uix-button playlist-bar-tray-button yt-uix-button-default yt-uix-slider-prev\"
+        onclick=\"return false;\"><img class=\"yt-uix-slider-prev-arrow\" src=\"//s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif\"
+        alt=\"Previous video\"></button><button class=\"yt-uix-button playlist-bar-tray-button
+        yt-uix-button-default yt-uix-slider-next\" onclick=\"return false;\"><img
+        class=\"yt-uix-slider-next-arrow\" src=\"//s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif\"
+        alt=\"Next video\"></button><div class=\"yt-uix-slider-body\"><div id=\"playlist-bar-tray-content\"
+        class=\"yt-uix-slider-slide\"><ol class=\"video-list\"></ol><ol id=\"playlist-bar-help\"><li
+        class=\"empty playlist-bar-help-message\">Your queue is empty. Add videos
+        to your queue using this button: <img src=\"//s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif\"
+        class=\"addto-button-help\"><br> or <a href=\"https://accounts.google.com/ServiceLogin?passive=true&amp;continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26feature%3Dplaylist%26hl%3Den_US%26next%3D%252Fwatch%253Fv%253DDM58Zdk7el0%2526feature%253Dyoutube_gdata_player%26nomobiletemp%3D1&amp;uilel=3&amp;hl=en_US&amp;service=youtube\">sign
+        in</a> to load a different list.</li></ol></div><div class=\"yt-uix-slider-shade-left\"></div><div
+        class=\"yt-uix-slider-shade-right\"></div></div></div><div id=\"playlist-bar-save\"></div><div
+        id=\"playlist-bar-lists\" class=\"dark-lolz\"></div><div id=\"playlist-bar-loading\"><img
+        src=\"//s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif\" alt=\"Loading...\"><span
+        id=\"playlist-bar-loading-message\">Loading...</span><span id=\"playlist-bar-saving-message\"
+        class=\"hid\">Saving...</span></div><div id=\"playlist-bar-template\" style=\"display:
+        none;\" data-video-thumb-url=\"//i4.ytimg.com/vi/__video_encrypted_id__/default.jpg\"><!--<li
+        class=\"playlist-bar-item yt-uix-slider-slide-unit __classes__\" data-video-id=\"__video_encrypted_id__\"><a
+        href=\"__video_url__\" title=\"__video_title__\" class=\"yt-uix-sessionlink\"
+        data-sessionlink=\"ei=CJLbjcfh_bMCFQPzRAod5UvsVg%3D%3D&amp;feature=BFa\"><span
+        class=\"video-thumb ux-thumb yt-thumb-default-106 \"><span class=\"yt-thumb-clip\"><span
+        class=\"yt-thumb-clip-inner\"><img src=\"https://s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif\"
+        alt=\"__video_title__\" data-thumb-manual=\"true\" data-thumb=\"__video_thumb_url__\"
+        width=\"106\" ><span class=\"vertical-align\"></span></span></span></span><span
+        class=\"screen\"></span><span class=\"count\"><strong>__list_position__</strong></span><span
+        class=\"play\"><img src=\"//s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif\"></span><span
+        class=\"yt-uix-button yt-uix-button-default delete\"><img class=\"yt-uix-button-icon-playlist-bar-delete\"
+        src=\"//s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif\" alt=\"Delete\"></span><span
+        class=\"now-playing\">Now playing</span><span dir=\"ltr\" class=\"title\"><span>__video_title__
+        \ <span class=\"uploader\">by __video_display_name__</span>\n</span></span><span
+        class=\"dragger\"></span></a></li>--></div><div id=\"playlist-bar-next-up-template\"
+        style=\"display: none;\"><!--<div class=\"playlist-bar-next-thumb\"><span
+        class=\"video-thumb ux-thumb yt-thumb-default-74 \"><span class=\"yt-thumb-clip\"><span
+        class=\"yt-thumb-clip-inner\"><img src=\"//i4.ytimg.com/vi/__video_encrypted_id__/default.jpg\"
+        alt=\"Thumbnail\" width=\"74\" ><span class=\"vertical-align\"></span></span></span></span></div>--></div></div>
+        \     <div id=\"playlist-bar-options-menu\" class=\"hid\">\n\n    <div id=\"playlist-bar-extras-menu\">\n
+        \       <ul>\n      <li><span class=\"yt-uix-button-menu-item\" data-action=\"clear\">\nClear
+        all videos from this list\n      </span></li>\n  </ul>\n\n    </div>\n\n    <ul>\n
+        \     <li><span class=\"yt-uix-button-menu-item\" onclick=\"window.location.href=&#39;//support.google.com/youtube/bin/answer.py?answer=146749&amp;hl=en-US&#39;\">Learn
+        more</span></li>\n    </ul>\n  </div>\n\n  </div>\n\n\n  \n    <div id=\"shared-addto-watch-later-login\"
+        class=\"hid\">\n      <a href=\"https://accounts.google.com/ServiceLogin?passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26feature%3Dplaylist%26hl%3Den_US%26next%3D%252Fwatch%253Fv%253DDM58Zdk7el0%2526feature%253Dyoutube_gdata_player%26nomobiletemp%3D1&uilel=3&hl=en_US&service=youtube\"
+        class=\"sign-in-link\">Sign in</a> to add this to a playlist\n\n    </div>\n\n
+        \ <div id=\"shared-addto-menu\" style=\"display: none;\" class=\"hid sign-in\">\n
+        \     <div class=\"addto-menu\">\n        <div id=\"addto-list-panel\" class=\"menu-panel
+        active-panel\">\n        <span class=\"yt-uix-button-menu-item yt-uix-tooltip
+        sign-in\"data-possible-tooltip=\"\"data-tooltip-show-delay=\"750\"><a href=\"https://accounts.google.com/ServiceLogin?passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26feature%3Dplaylist%26hl%3Den_US%26next%3D%252Fwatch%253Fv%253DDM58Zdk7el0%2526feature%253Dyoutube_gdata_player%26nomobiletemp%3D1&uilel=3&hl=en_US&service=youtube\"
+        class=\"sign-in-link\">Sign in</a> to add this to a playlist\n</span>\n\n
+        \ </div>\n  <div id=\"addto-list-saved-panel\" class=\"menu-panel\">\n    <div
+        class=\"panel-content\">\n      <div class=\"yt-alert yt-alert-naked yt-alert-success
+        \ \">  <div class=\"yt-alert-icon\">\n    <img src=\"//s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif\"
+        class=\"icon master-sprite\" alt=\"Alert icon\">\n  </div>\n<div class=\"yt-alert-content\"
+        role=\"alert\">    <span class=\"yt-alert-vertical-trick\"></span>\n    <div
+        class=\"yt-alert-message\">\n            \n  <span class=\"message\">Added
+        to <span class=\"addto-title yt-uix-tooltip yt-uix-tooltip-reverse\" title=\"More
+        information about this playlist\" data-tooltip-show-delay=\"750\"></span></span>\n\n
+        \   </div>\n</div></div>\n    </div>\n  </div>\n  <div id=\"addto-list-error-panel\"
+        class=\"menu-panel\">\n    <div class=\"panel-content\">\n      <img src=\"//s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif\">\n
+        \     <span class=\"error-details\"></span>\n      <a class=\"show-menu-link\">Back
+        to list</a>\n    </div>\n  </div>\n\n        <div id=\"addto-note-input-panel\"
+        class=\"menu-panel\">\n    <div class=\"panel-content\">\n      <div class=\"yt-alert
+        yt-alert-naked yt-alert-success  \">  <div class=\"yt-alert-icon\">\n    <img
+        src=\"//s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif\" class=\"icon master-sprite\"
+        alt=\"Alert icon\">\n  </div>\n<div class=\"yt-alert-content\" role=\"alert\">
+        \   <span class=\"yt-alert-vertical-trick\"></span>\n    <div class=\"yt-alert-message\">\n
+        \             <span class=\"message\">Added to playlist:</span>\n  <span class=\"addto-title
+        yt-uix-tooltip\" title=\"More information about this playlist\" data-tooltip-show-delay=\"750\"></span>\n\n
+        \   </div>\n</div></div>\n    </div>\n<div class=\"yt-uix-char-counter\" data-char-limit=\"150\"><div
+        class=\"addto-note-box addto-text-box\"><textarea id=\"addto-note\" class=\"addto-note
+        yt-uix-char-counter-input\" maxlength=\"150\"></textarea><label for=\"addto-note\"
+        class=\"addto-note-label\">Add an optional note</label></div><span class=\"yt-uix-char-counter-remaining\">150</span></div>
+        \   <button disabled=\"disabled\" type=\"button\" class=\"playlist-save-note
+        yt-uix-button yt-uix-button-default\" onclick=\";return false;\"  role=\"button\"><span
+        class=\"yt-uix-button-content\">Add note </span></button>\n  </div>\n  <div
+        id=\"addto-note-saving-panel\" class=\"menu-panel\">\n    <div class=\"panel-content
+        loading-content\">\n      <img src=\"//s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif\">\n
+        \     <span>Saving note...</span>\n    </div>\n  </div>\n  <div id=\"addto-note-saved-panel\"
+        class=\"menu-panel\">\n    <div class=\"panel-content\">\n      <img src=\"//s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif\">\n
+        \     <span class=\"message\">Note added to:</span>\n    </div>\n  </div>\n
+        \ <div id=\"addto-note-error-panel\" class=\"menu-panel\">\n    <div class=\"panel-content\">\n
+        \     <img src=\"//s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif\">\n      <span
+        class=\"message\">Error adding note:</span>\n      <ul class=\"error-details\"></ul>\n
+        \     <a class=\"add-note-link\">Click to add a new note</a>\n    </div>\n
+        \ </div>\n  <div class=\"close-note hid\">\n    <img src=\"//s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif\"
+        class=\"close-button\">\n  </div>\n\n  </div>\n\n  </div>\n\n\n          <div
+        class=\"yt-dialog hid\" id=\"feed-privacy-lb\">\n    <div class=\"yt-dialog-base\">\n
+        \     <span class=\"yt-dialog-align\"></span>\n      <div class=\"yt-dialog-fg\">\n
+        \       <div class=\"yt-dialog-fg-content\">\n          <div class=\"yt-dialog-loading\">\n
+        \             <div class=\"yt-dialog-waiting-content\">\n    <div class=\"yt-spinner-img\"></div><div
+        class=\"yt-dialog-waiting-text\">Loading...</div>\n  </div>\n\n          </div>\n
+        \         <div class=\"yt-dialog-content\">\n              <div id=\"feed-privacy-dialog\">\n
+        \ </div>\n\n          </div>\n          <div class=\"yt-dialog-working\">\n
+        \             <div id=\"yt-dialog-working-overlay\">\n  </div>\n  <div id=\"yt-dialog-working-bubble\">\n
+        \   <div class=\"yt-dialog-waiting-content\">\n      <div class=\"yt-spinner-img\"></div><div
+        class=\"yt-dialog-waiting-text\">Working...</div>\n    </div>\n  </div>\n\n
+        \         </div>\n        </div>\n      </div>\n    </div>\n  </div>\n\n\n\n\n
+        \     </div>\n    <!-- end page -->\n  </div>\n\n\n    \n  \n    <script id=\"js-2212214682\"
+        src=\"//s.ytimg.com/yts/jsbin/www-core-vflAFY677.js\" data-loaded=\"true\"></script>\n\n\n
+        \ <script>\n        yt.setConfig({\n      'XSRF_TOKEN': 'LIFbosGfUgaQCSGbjeAMdR-qmzd8MTM1NDYwNzgzM0AxMzU0NTIxNDMz',\n
+        \     'XSRF_FIELD_NAME': 'session_token'\n    });\n\n    yt.setConfig('XSRF_REDIRECT_TOKEN',
+        'jTeN4K2ZJaq_2TPSEk-17jDGHXx8MTM1NDYwNzgzM0AxMzU0NTIxNDMz');\n\n    yt.setConfig({\n
+        \     'EVENT_ID': \"CJLbjcfh_bMCFQPzRAod5UvsVg==\",\n      'CURRENT_URL':
+        \"http:\\/\\/www.youtube.com\\/watch?v=DM58Zdk7el0\\u0026feature=youtube_gdata_player\",\n
+        \     'LOGGED_IN': false,\n      'SESSION_INDEX': null,\n\n      'WATCH_CONTEXT_CLIENTSIDE':
+        false,\n\n      'FEEDBACK_LOCALE_LANGUAGE': \"en\",\n      'FEEDBACK_LOCALE_EXTRAS':
+        {\"logged_in\": false, \"experiments\": \"922401,920704,912806,927201,925703,925706,928001,922403,913605,913546,913556,908493,920201,911116,901451\",
+        \"guide_subs\": \"NA\", \"accept_language\": null}    });\n  </script>\n\n\n
+        \ \n    <script>\n    \n  </script>\n\n  \n    \n\n\n\n\n  <script>yt.setConfig('THUMB_DELAY_LOAD_BUFFER',
+        0);</script>\n\n  <script>\n    \n\n\n  yt.setMsg({\n    'LIST_CLEARED': \"List
+        cleared\",\n    'PLAYLIST_VIDEO_DELETED': \"Video deleted.\",\n    'ERROR_OCCURRED':
+        \"Sorry, an error occurred.\",\n    'NEXT_VIDEO_TOOLTIP': \"Next video:\\u003cbr\\u003e
+        \\u0026#8220;${next_video_title}\\u0026#8221;\",\n    'NEXT_VIDEO_NOTHUMB_TOOLTIP':
+        \"Next video\",\n    'SHOW_PLAYLIST_TOOLTIP': \"Show playlist\",\n    'HIDE_PLAYLIST_TOOLTIP':
+        \"Hide playlist\",\n    'AUTOPLAY_ON_TOOLTIP': \"Turn autoplay off\",\n    'AUTOPLAY_OFF_TOOLTIP':
+        \"Turn autoplay on\",\n    'SHUFFLE_ON_TOOLTIP': \"Turn shuffle off\",\n    'SHUFFLE_OFF_TOOLTIP':
+        \"Turn shuffle on\",\n    'PLAYLIST_BAR_PLAYLIST_SAVED': \"Playlist saved!\",\n
+        \   'PLAYLIST_BAR_ADDED_TO_FAVORITES': \"Added to favorites\",\n    'PLAYLIST_BAR_ADDED_TO_PLAYLIST':
+        \"Added to playlist\",\n    'PLAYLIST_BAR_ADDED_TO_QUEUE': \"Added to queue\",\n
+        \   'AUTOPLAY_WARNING1': \"Next video starts in 1 second...\",\n    'AUTOPLAY_WARNING2':
+        \"Next video starts in 2 seconds...\",\n    'AUTOPLAY_WARNING3': \"Next video
+        starts in 3 seconds...\",\n    'AUTOPLAY_WARNING4': \"Next video starts in
+        4 seconds...\",\n    'AUTOPLAY_WARNING5': \"Next video starts in 5 seconds...\",\n
+        \   'UNDO_LINK': \"Undo\"  });\n\n\n  yt.setConfig({\n    'DRAGDROP_BINARY_URL':
+        \"\\/\\/s.ytimg.com\\/yts\\/jsbin\\/www-dragdrop-vflfP2Y4U.js\",\n    'PLAYLIST_BAR_PLAYING_INDEX':
+        -1  });\n\n    yt.setAjaxToken('addto_ajax_logged_out', \"YwtTMNdk6SiWQPWfwDheGqEJqHB8MTM1NDYwNzgzM0AxMzU0NTIxNDMz\");\n\n
+        \   yt.www.lists.init();\n\n\n\n\n\n\n\n\n\n    yt.setConfig({'SBOX_JS_URL':
+        \"\\/\\/s.ytimg.com\\/yts\\/jsbin\\/www-searchbox-vfl8SWkPb.js\",'SBOX_SETTINGS':
+        {\"CLOSE_ICON_URL\": \"\\/\\/s.ytimg.com\\/yts\\/img\\/icons\\/close-vflrEJzIW.png\",
+        \"SHOW_CHIP\": false, \"PSUGGEST_TOKEN\": null, \"REQUEST_DOMAIN\": \"us\",
+        \"EXPERIMENT_ID\": -1, \"SESSION_INDEX\": null, \"HAS_ON_SCREEN_KEYBOARD\":
+        false, \"CHIP_PARAMETERS\": {}, \"REQUEST_LANGUAGE\": \"en\"},'SBOX_LABELS':
+        {\"SUGGESTION_DISMISS_LABEL\": \"Dismiss\", \"SUGGESTION_DISMISSED_LABEL\":
+        \"Suggestion dismissed\"}});\n\n\n\n\n\n        yt.setConfig('FEED_PRIVACY_CSS_URL',
+        \"\\/\\/s.ytimg.com\\/yts\\/cssbin\\/www-feedprivacydialog-vflUOqWgf.css\");\n
+        \ yt.setAjaxToken('feed_privacy_ajax', \"\");\n  yt.pubsub.subscribe('init',
+        yt.www.account.FeedPrivacyDialog.init);\n\n  </script>\n\n  <script>\n    yt.setMsg({\n
+        \     'ADDTO_WATCH_LATER_ADDED': \"Added\",\n      'ADDTO_WATCH_LATER_ERROR':
+        \"Error\"\n    });\n  </script>\n\n  \n\n  \n\n\n  <div id=\"debug\">\n    \n
+        \ </div>\n\n</body>\n</html>\n"
+    http_version: '1.1'
+  recorded_at: Mon, 03 Dec 2012 07:57:13 GMT
+recorded_with: VCR 2.3.0
