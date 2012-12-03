@@ -1,6 +1,21 @@
 require 'open-uri'
 
 class DubDubDub::Client
+  def initialize
+    # TODO
+  end
+
+  # Returns a Net::HTTP object
+  def net_http(uri)
+    raise ArgumentError unless uri.is_a? URI::HTTP
+
+    http = Net::HTTP.new(uri.host, uri.port)
+    http.verify_mode = OpenSSL::SSL::VERIFY_NONE  # ssl certificate doesn't need to be verified, otherwise a OpenSSL::SSL::SSLError might get thrown
+    http.use_ssl = true if uri.scheme == "https"
+
+    http
+  end
+
   # Follow a url to the end until it can no longer go any further
   # Even if it times out, it will return the url that it times out on!
   def follow_url(url, options = {}, &block)
@@ -25,9 +40,7 @@ class DubDubDub::Client
         at_base = true if options[:until] and options[:until].call(url)
 
         uri = URI.parse(url)
-        http = Net::HTTP.new(uri.host, uri.port)
-        http.verify_mode = OpenSSL::SSL::VERIFY_NONE  # ssl certificate doesn't need to be verified, otherwise a OpenSSL::SSL::SSLError might get thrown
-        http.use_ssl = true if uri.scheme == "https"
+        net_http = net_http(uri)
         at_base = true unless uri.respond_to?(:request_uri)   # make sure its a proper url
 
         unless at_base
@@ -41,7 +54,7 @@ class DubDubDub::Client
 
               # Don't let the request take too long
               response = Timeout::timeout(options[:timeout]) do
-                http.request(request)
+                net_http.request(request)
               end
 
               break   # if it reaches this, that means the request was successful do break out!
@@ -69,7 +82,6 @@ class DubDubDub::Client
 
       urls << url
 
-      # yield(url) if block_given? if urls.count == 1   # Yield the final url before breaking if there has only been one, otherwise do not yield
       break if at_base
       yield(url) if block_given?
     end
