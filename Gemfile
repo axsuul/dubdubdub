@@ -8,4 +8,5 @@ group :development do
   gem 'fakeweb', '~>1.3.0'   # required for vcr
   gem "bundler"
   gem "jeweler", "~> 1.8.4"
+  gem 'pry'
 end
