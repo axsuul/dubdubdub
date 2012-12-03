@@ -2,6 +2,7 @@
 
 require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 require 'rest-client'
+require 'nokogiri'
 
 describe DubDubDub do
   let(:www) { DubDubDub.new }
@@ -55,6 +56,13 @@ describe DubDubDub do
     it "works with a proxy", vcr: { cassette_name: "get/proxy", record: :once } do
       www.proxy = "203.131.212.166"
       response = www.get "http://www.google.com"
+    end
+  end
+
+  describe '#crawl' do
+    it "performs a GET request and returns a Nokogiri HTML document", vcr: { cassette_name: "crawl/basic", record: :once } do
+      html = www.crawl "http://www.google.com"
+      html.should be_a Nokogiri::HTML::Document
     end
   end
 

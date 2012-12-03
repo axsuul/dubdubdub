@@ -1,5 +1,5 @@
-require 'open-uri'
 require 'net/http'
+require 'nokogiri'
 
 class DubDubDub::Client
   attr_accessor :proxy_host, :proxy_port, :proxy_user, :proxy_password
@@ -66,6 +66,13 @@ class DubDubDub::Client
   # Perform a DELETE request
   def delete(url, *args)
     rest_client_resource(url).delete(*args)
+  end
+
+  # Helper method to crawl by using a GET request
+  def crawl(url, *args)
+    response = get(url, *args)
+
+    Nokogiri::HTML(response.body)
   end
 
   # Follow a url to the end until it can no longer go any further
