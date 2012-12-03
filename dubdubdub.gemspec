@@ -23,6 +23,7 @@ Gem::Specification.new do |s|
     "LICENSE.txt",
     "README.md",
     "Rakefile",
+    "dubdubdub.gemspec",
     "lib/dubdubdub.rb",
     "lib/dubdubdub/client.rb",
     "lib/dubdubdub/exceptions.rb",
