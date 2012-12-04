@@ -29,6 +29,11 @@ www.browse "http://google.com"
 
 # Follows and returns the end URL
 www.follow "http://bit.ly/abcdefg"
+
+# Be RESTful
+www.get "http://google.com"
+www.post "http://google.com", {}
+www.delete "http://google.com", {}
 ```
 
 Proxies
