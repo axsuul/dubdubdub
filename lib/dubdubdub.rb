@@ -17,6 +17,11 @@ class DubDubDub
     @configuration ||= DubDubDub::Configuration.new
   end
 
+   # Reset configuration back to defaults, useful for testing
+  def self.reset_configuration!
+    @configuration = nil
+  end
+
   def initialize(options = {})
     @client = DubDubDub::Client.new(options)
   end

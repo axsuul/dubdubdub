@@ -65,6 +65,20 @@ describe DubDubDub do
     end
   end
 
+  describe '::reset_configuration!' do
+    it "resets configuration by to defaults" do
+      DubDubDub.configure do |config|
+        config.ignore_proxies = true
+      end
+
+      DubDubDub.configuration.ignore_proxies.should be_true
+
+      DubDubDub.reset_configuration!
+
+      DubDubDub.configuration.ignore_proxies.should be_false
+    end
+  end
+
   describe '::configure' do
     it "sets config attributes" do
       DubDubDub.configure do |config|
