@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = "dubdubdub"
-  s.version = "0.2.7"
+  s.version = "0.3.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["James Hu"]
@@ -33,17 +33,17 @@ Gem::Specification.new do |s|
     "spec/support/vcr.rb",
     "spec/vcr/browse/basic.yml",
     "spec/vcr/crawl/basic.yml",
-    "spec/vcr/follow_url/alias_link.yml",
-    "spec/vcr/follow_url/base.yml",
-    "spec/vcr/follow_url/block_base_url.yml",
-    "spec/vcr/follow_url/eoferror.yml",
-    "spec/vcr/follow_url/https.yml",
-    "spec/vcr/follow_url/pass_block.yml",
-    "spec/vcr/follow_url/pass_block_iteration.yml",
-    "spec/vcr/follow_url/proxied.yml",
-    "spec/vcr/follow_url/proxy.yml",
-    "spec/vcr/follow_url/proxy_forbidden.yml",
-    "spec/vcr/follow_url/relative_redirects.yml",
+    "spec/vcr/follow/alias_link.yml",
+    "spec/vcr/follow/all_the_way.yml",
+    "spec/vcr/follow/base.yml",
+    "spec/vcr/follow/eoferror.yml",
+    "spec/vcr/follow/https.yml",
+    "spec/vcr/follow/pass_block.yml",
+    "spec/vcr/follow/pass_block_iteration.yml",
+    "spec/vcr/follow/proxy.yml",
+    "spec/vcr/follow/proxy_forbidden.yml",
+    "spec/vcr/follow/relative_redirects.yml",
+    "spec/vcr/follow/uri_error.yml",
     "spec/vcr/get/basic.yml",
     "spec/vcr/get/params.yml",
     "spec/vcr/get/proxy.yml"
