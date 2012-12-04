@@ -158,7 +158,7 @@ class DubDubDub::Client
             # If any of these exceptions are thrown, it has timed out, so keep trying depending on how many attempts we have
             rescue Timeout::Error, Errno::ETIMEDOUT, Errno::EHOSTUNREACH
               # do another attempt if we are allowed one, or stop
-              at_base = true and break if request_attempts == options[:attempts]
+              raise DubDubDub::Timeout and break if request_attempts == options[:attempts]
             rescue SocketError  # doesn't exist
               at_base = true and break
             end
