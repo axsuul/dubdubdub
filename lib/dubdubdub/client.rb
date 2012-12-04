@@ -43,7 +43,7 @@ class DubDubDub::Client
   end
 
   def proxy
-    "#{proxy_host}:#{proxy_port}"
+    "#{proxy_host}:#{proxy_port}" if proxy_host and proxy_port
   end
 
   def proxy?
@@ -52,27 +52,10 @@ class DubDubDub::Client
     !!proxy
   end
 
-  # Returns a Net::HTTP object
-  def net_http(uri)
-    raise ArgumentError, "A URI must be provided!" unless uri.kind_of? URI::Generic
-
-    net_http_class = if proxy?
-      Net::HTTP.Proxy(proxy_host, proxy_port, proxy_user, proxy_password)
-    else
-      Net::HTTP
-    end
-
-    http = net_http_class.new(uri.host, uri.port)
-    http.verify_mode = OpenSSL::SSL::VERIFY_NONE  # ssl certificate doesn't need to be verified, otherwise a OpenSSL::SSL::SSLError might get thrown
-    http.use_ssl = true if uri.scheme == "https"
-
-    http
-  end
-
   # Returns a RestClient::Resource
   def rest_client_resource(url)
     options = {}
-    options[:proxy] = proxy if proxy?
+    options[:proxy] = "http://#{proxy}" if proxy?
 
     RestClient::Resource.new(url, options)
   end

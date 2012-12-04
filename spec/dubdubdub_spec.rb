@@ -168,8 +168,11 @@ describe DubDubDub do
     end
 
     it "works with a proxy", vcr: { cassette_name: "get/proxy", record: :once } do
-      www.proxy = "203.131.212.166"
-      response = www.get "http://www.google.com"
+      www.proxy = "173.234.181.64:8800"
+      response = www.get "http://www.whatismyipaddress.com"
+      html = Nokogiri::HTML(response)
+
+      html.css('.ip').text.strip.should == "173.234.181.64"
     end
   end
 

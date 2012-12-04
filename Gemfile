@@ -1,6 +1,6 @@
 source "http://rubygems.org"
 
-gem 'rest-client'
+gem 'rest-client', git: 'https://github.com/daveola/rest-client'
 gem 'nokogiri'
 gem 'mechanize'
 
