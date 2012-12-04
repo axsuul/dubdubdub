@@ -16,13 +16,13 @@ class DubDubDub::Client
     if options[:proxy]
       # If true, refer to global proxy config
       if options[:proxy] == true
-        proxy = DubDubDub.configuration.proxy
+        unless DubDubDub.configuration.ignore_proxy?
+          proxy = DubDubDub.configuration.proxy
 
-        if proxy.nil? and !DubDubDub.configuration.ignore_proxy
-          raise DubDubDub::Exception, "No proxy has been configured or provided!"
+          raise DubDubDub::Exception, "No proxy has been configured or provided!" if proxy.nil?
+
+          self.proxy = proxy
         end
-
-        self.proxy = proxy
       # Otherwise, it should be a proxy url
       else
         self.proxy = options[:proxy]

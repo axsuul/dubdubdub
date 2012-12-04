@@ -7,6 +7,8 @@ class DubDubDub::Configuration
     self.ignore_proxy = false
   end
 
+  alias_method :ignore_proxy?, :ignore_proxy
+
   # Can be used as callable-setter when block provided.
   def proxy(&block)
     if block_given?

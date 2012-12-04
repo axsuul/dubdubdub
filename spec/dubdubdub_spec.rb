@@ -41,6 +41,16 @@ describe DubDubDub do
       www.proxy.should == "localhost:8000"
     end
 
+    it "ignores proxy if configured to and it's set to nil" do
+      DubDubDub.configure do |config|
+        config.ignore_proxy = true
+        config.proxy = nil
+      end
+
+      www = DubDubDub.new(proxy: true)
+      www.should_not be_proxy
+    end
+
     it "raises an error if we have specified to use a proxy but none has been set globally" do
       DubDubDub.configure do |config|
         config.ignore_proxy = false
