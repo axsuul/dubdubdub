@@ -8,6 +8,15 @@ class DubDubDub
     attr_accessor :proxies
   end
 
+  def self.configure
+    yield(configuration)
+  end
+
+  # Returns DubDubDub::Configuration or instantiates if doesn't exit
+  def self.configuration
+    @configuration ||= DubDubDub::Configuration.new
+  end
+
   def initialize(options = {})
     @client = DubDubDub::Client.new(options)
   end
@@ -23,4 +32,5 @@ class DubDubDub
 end
 
 require File.expand_path(File.dirname(__FILE__) + '/dubdubdub/exceptions')
+require File.expand_path(File.dirname(__FILE__) + '/dubdubdub/configuration')
 require File.expand_path(File.dirname(__FILE__) + '/dubdubdub/client')

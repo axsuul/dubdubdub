@@ -55,6 +55,26 @@ describe DubDubDub do
     end
   end
 
+  describe '::configuration' do
+    it "accesses config object" do
+      DubDubDub.configuration.should be_a DubDubDub::Configuration
+    end
+
+    it "has default config values" do
+      DubDubDub.configuration.ignore_proxies.should be_false
+    end
+  end
+
+  describe '::configure' do
+    it "sets config attributes" do
+      DubDubDub.configure do |config|
+        config.ignore_proxies = true
+      end
+
+      DubDubDub.configuration.ignore_proxies.should be_true
+    end
+  end
+
   describe '::proxies' do
     it "is nil by default" do
       DubDubDub.proxies.should be_nil
