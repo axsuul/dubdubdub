@@ -20,7 +20,7 @@ class DubDubDub::Client
         if DubDubDub.proxies and DubDubDub.proxies.is_a?(Array) and DubDubDub.proxies.any?
           self.proxy = DubDubDub.proxies.sample
         else
-          raise DubDubDub::Exception, "No proxies have been specified!" unless DubDubDub.configuration.ignore_proxies
+          raise DubDubDub::Exception, "No proxies have been specified!" unless DubDubDub.configuration.ignore_proxy
         end
       # Otherwise, it should be a proxy url
       else
@@ -46,7 +46,7 @@ class DubDubDub::Client
   end
 
   def proxy?
-    return false if DubDubDub.configuration.ignore_proxies
+    return false if DubDubDub.configuration.ignore_proxy
 
     !!proxy
   end

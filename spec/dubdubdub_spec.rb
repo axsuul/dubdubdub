@@ -50,7 +50,7 @@ describe DubDubDub do
     end
 
     it "doesn't raise an error if configured to ignore proxies and we have specified to use a proxy from the list but there are none" do
-      DubDubDub.configuration.ignore_proxies = true
+      DubDubDub.configuration.ignore_proxy = true
       DubDubDub.proxies = nil
       lambda { DubDubDub.new(proxy: true) }.should_not raise_error(DubDubDub::Exception)
     end
@@ -67,31 +67,31 @@ describe DubDubDub do
     end
 
     it "has default config values" do
-      DubDubDub.configuration.ignore_proxies.should be_false
+      DubDubDub.configuration.ignore_proxy.should be_false
     end
   end
 
   describe '::reset_configuration!' do
     it "resets configuration by to defaults" do
       DubDubDub.configure do |config|
-        config.ignore_proxies = true
+        config.ignore_proxy = true
       end
 
-      DubDubDub.configuration.ignore_proxies.should be_true
+      DubDubDub.configuration.ignore_proxy.should be_true
 
       DubDubDub.reset_configuration!
 
-      DubDubDub.configuration.ignore_proxies.should be_false
+      DubDubDub.configuration.ignore_proxy.should be_false
     end
   end
 
   describe '::configure' do
     it "sets config attributes" do
       DubDubDub.configure do |config|
-        config.ignore_proxies = true
+        config.ignore_proxy = true
       end
 
-      DubDubDub.configuration.ignore_proxies.should be_true
+      DubDubDub.configuration.ignore_proxy.should be_true
     end
   end
 
@@ -125,7 +125,7 @@ describe DubDubDub do
     end
 
     it "ignores proxy if configured" do
-      DubDubDub.configuration.ignore_proxies = true
+      DubDubDub.configuration.ignore_proxy = true
 
       www.proxy = "localhost:8000"
       agent = www.mechanize
