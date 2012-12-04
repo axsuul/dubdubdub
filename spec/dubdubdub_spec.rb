@@ -49,6 +49,12 @@ describe DubDubDub do
       lambda { DubDubDub.new(proxy: true) }.should raise_error(DubDubDub::Exception)
     end
 
+    it "doesn't raise an error if configured to ignore proxies and we have specified to use a proxy from the list but there are none" do
+      DubDubDub.configuration.ignore_proxies = true
+      DubDubDub.proxies = nil
+      lambda { DubDubDub.new(proxy: true) }.should_not raise_error(DubDubDub::Exception)
+    end
+
     it "does not pass the method to client if that method doesn't exist within the client" do
       www = DubDubDub.new
       lambda { www.some_method_that_doesnt_exist }.should raise_error(NameError)
