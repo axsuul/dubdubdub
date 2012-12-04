@@ -231,8 +231,8 @@ describe DubDubDub do
       lambda { www.follow_url("https://www.youtube.com/watch?v=DM58Zdk7el0&feature=youtube_gdata_player") }.should_not raise_error(EOFError)
     end
 
-    it "returns the same url if the name or service doesn't exist", vcr: { cassette_name: "follow_url/doesnt_exist", record: :once } do
-      www.follow_url("http://cnnsadasdasdasdasdasd.com/asd").should == "http://cnnsadasdasdasdasdasd.com/asd"
+    it "raises an exception if doesn't exist", vcr: { cassette_name: "follow_url/doesnt_exist", record: :once } do
+      lambda { www.follow_url("http://cnnsadasdasdasdasdasd.com/asd") }.should raise_error(DubDubDub::NotFound)
     end
 
     it "returns actual asset link for an alias link", vcr: { cassette_name: "follow_url/alias_link", record: :once } do

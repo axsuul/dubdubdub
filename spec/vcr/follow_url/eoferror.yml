@@ -19,7 +19,7 @@ http_interactions:
       content-type:
       - text/html; charset=iso-8859-1
       date:
-      - Mon, 03 Dec 2012 08:15:21 GMT
+      - Tue, 04 Dec 2012 08:35:17 GMT
       location:
       - http://soulpancake.com/post/1607/whats-your-beautiful-mess.html
       server:
@@ -52,7 +52,7 @@ http_interactions:
 
 '
     http_version: '1.1'
-  recorded_at: Mon, 03 Dec 2012 08:14:42 GMT
+  recorded_at: Tue, 04 Dec 2012 08:36:04 GMT
 - request:
     method: get
     uri: http://soulpancake.com/post/1607/whats-your-beautiful-mess.html
@@ -72,16 +72,16 @@ http_interactions:
       content-type:
       - text/html
       date:
-      - Mon, 03 Dec 2012 08:13:57 GMT
+      - Tue, 04 Dec 2012 08:36:44 GMT
       server:
       - Apache/2.2.22 (Ubuntu)
       set-cookie:
-      - sp_session=a%3A4%3A%7Bs%3A10%3A%22session_id%22%3Bs%3A32%3A%22b2bd564558995de8bc1c75baa1a0958a%22%3Bs%3A10%3A%22ip_address%22%3Bs%3A12%3A%2210.255.3.229%22%3Bs%3A10%3A%22user_agent%22%3Bs%3A4%3A%22Ruby%22%3Bs%3A13%3A%22last_activity%22%3Bs%3A10%3A%221354522437%22%3B%7Dbdc4597c888609d6846f9933f9936a17;
-        expires=Mon, 03-Dec-2012 16:13:57 GMT; path=/
-      - sp_session=a%3A5%3A%7Bs%3A10%3A%22session_id%22%3Bs%3A32%3A%22b2bd564558995de8bc1c75baa1a0958a%22%3Bs%3A10%3A%22ip_address%22%3Bs%3A12%3A%2210.255.3.229%22%3Bs%3A10%3A%22user_agent%22%3Bs%3A4%3A%22Ruby%22%3Bs%3A13%3A%22last_activity%22%3Bs%3A10%3A%221354522437%22%3Bs%3A12%3A%22last_section%22%3Bs%3A5%3A%22other%22%3B%7D6101531625b7ff45ef0cc68715c5c504;
-        expires=Mon, 03-Dec-2012 16:13:57 GMT; path=/
-      - sp_session=a%3A6%3A%7Bs%3A10%3A%22session_id%22%3Bs%3A32%3A%22b2bd564558995de8bc1c75baa1a0958a%22%3Bs%3A10%3A%22ip_address%22%3Bs%3A12%3A%2210.255.3.229%22%3Bs%3A10%3A%22user_agent%22%3Bs%3A4%3A%22Ruby%22%3Bs%3A13%3A%22last_activity%22%3Bs%3A10%3A%221354522437%22%3Bs%3A12%3A%22last_section%22%3Bs%3A5%3A%22other%22%3Bs%3A16%3A%22previous_section%22%3Bs%3A0%3A%22%22%3B%7Dafc08837b94ad920b977e814191a22ba;
-        expires=Mon, 03-Dec-2012 16:13:57 GMT; path=/
+      - sp_session=a%3A4%3A%7Bs%3A10%3A%22session_id%22%3Bs%3A32%3A%226881139e200826d02ee11f7deeac58b9%22%3Bs%3A10%3A%22ip_address%22%3Bs%3A12%3A%2210.255.3.229%22%3Bs%3A10%3A%22user_agent%22%3Bs%3A4%3A%22Ruby%22%3Bs%3A13%3A%22last_activity%22%3Bs%3A10%3A%221354610204%22%3B%7D7a2f775d1c55a4a8f7a7cafc85922030;
+        expires=Tue, 04-Dec-2012 16:36:44 GMT; path=/
+      - sp_session=a%3A5%3A%7Bs%3A10%3A%22session_id%22%3Bs%3A32%3A%226881139e200826d02ee11f7deeac58b9%22%3Bs%3A10%3A%22ip_address%22%3Bs%3A12%3A%2210.255.3.229%22%3Bs%3A10%3A%22user_agent%22%3Bs%3A4%3A%22Ruby%22%3Bs%3A13%3A%22last_activity%22%3Bs%3A10%3A%221354610204%22%3Bs%3A12%3A%22last_section%22%3Bs%3A5%3A%22other%22%3B%7D6df584d4d190886e8457162620b51c4e;
+        expires=Tue, 04-Dec-2012 16:36:44 GMT; path=/
+      - sp_session=a%3A6%3A%7Bs%3A10%3A%22session_id%22%3Bs%3A32%3A%226881139e200826d02ee11f7deeac58b9%22%3Bs%3A10%3A%22ip_address%22%3Bs%3A12%3A%2210.255.3.229%22%3Bs%3A10%3A%22user_agent%22%3Bs%3A4%3A%22Ruby%22%3Bs%3A13%3A%22last_activity%22%3Bs%3A10%3A%221354610204%22%3Bs%3A12%3A%22last_section%22%3Bs%3A5%3A%22other%22%3Bs%3A16%3A%22previous_section%22%3Bs%3A0%3A%22%22%3B%7D3078cfcdd99f66ee1ac73cda471ff251;
+        expires=Tue, 04-Dec-2012 16:36:44 GMT; path=/
       vary:
       - Accept-Encoding
       x-powered-by:
@@ -94,5 +94,5 @@ http_interactions:
       encoding: US-ASCII
       string: ''
     http_version: '1.1'
-  recorded_at: Mon, 03 Dec 2012 08:14:43 GMT
+  recorded_at: Tue, 04 Dec 2012 08:36:05 GMT
 recorded_with: VCR 2.3.0

@@ -160,7 +160,7 @@ class DubDubDub::Client
               # do another attempt if we are allowed one, or stop
               raise DubDubDub::Timeout and break if request_attempts == options[:attempts]
             rescue SocketError  # doesn't exist
-              at_base = true and break
+              raise DubDubDub::NotFound, "Could not find the way when trying to follow #{url}!"
             end
           end
 
@@ -168,14 +168,14 @@ class DubDubDub::Client
           when Net::HTTPSuccess then at_base = true
           when Net::HTTPRedirection then url = response['location']
           when Net::HTTPForbidden then raise DubDubDub::Forbidden
-          # Couldn't resolve, just return url
-          else at_base = true
+          # Couldn't resolve
+          else raise DubDubDub::Exception, "Could not resolve when trying to follow #{url}!"
           end if response
         end
 
       # If any of these exceptions get thrown, return the current url
       rescue SocketError, EOFError
-        at_base = true
+        raise DubDubDub::Exception, "Unknown error when trying to follow #{url}!"
       rescue URI::InvalidURIError
         return url  # Just return it
       end
