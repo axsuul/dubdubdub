@@ -1,0 +1,143 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.soulpancake.com/post/1607/whats-your-beautiful-mess.html
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Mechanize/2.5.1 Ruby/1.9.3p125 (http://github.com/tenderlove/mechanize/)
+      accept-encoding:
+      - gzip,deflate,identity
+      accept-charset:
+      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
+      accept-language:
+      - en-us,en;q=0.5
+      host:
+      - www.soulpancake.com
+      connection:
+      - keep-alive
+      keep-alive:
+      - 300
+  response:
+    status:
+      code: 301
+      message: !binary |-
+        TW92ZWQgUGVybWFuZW50bHk=
+    headers:
+      !binary "Y29udGVudC1lbmNvZGluZw==":
+      - !binary |-
+        Z3ppcA==
+      !binary "Y29udGVudC10eXBl":
+      - !binary |-
+        dGV4dC9odG1sOyBjaGFyc2V0PWlzby04ODU5LTE=
+      !binary "ZGF0ZQ==":
+      - !binary |-
+        VHVlLCAwNCBEZWMgMjAxMiAxMzo1Mjo1NCBHTVQ=
+      !binary "bG9jYXRpb24=":
+      - !binary |-
+        aHR0cDovL3NvdWxwYW5jYWtlLmNvbS9wb3N0LzE2MDcvd2hhdHMteW91ci1i
+        ZWF1dGlmdWwtbWVzcy5odG1s
+      !binary "c2VydmVy":
+      - !binary |-
+        QXBhY2hlLzIuMi4yMiAoVWJ1bnR1KQ==
+      !binary "dmFyeQ==":
+      - !binary |-
+        QWNjZXB0LUVuY29kaW5n
+      !binary "Y29udGVudC1sZW5ndGg=":
+      - !binary |-
+        Mjc1
+      !binary "Y29ubmVjdGlvbg==":
+      - !binary |-
+        a2VlcC1hbGl2ZQ==
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA21QwU6EQAy98xWVkx6YAiZqzDiJLhg32VUS2YPHAbqZjcCQ
+        YWYJf+/AejKmSZP2vbbvlV9lH5vyq8jhrdzvoDi87LYbCCPEbV6+ImZldkFS
+        FiPm76EIuLJdK7gi2fjCnmxL4jZOYK/P1EBBppM99badOV7AgONK5pVu5mU+
+        Ef9wfTfggygVQaNr1/k2KDlCt1K5BGXo+BQqa4dHxFG7dpB9Lb+J1brDQY8W
+        k7v4Hicl7RjN2pmoIuns6ejaqKNxZIvuUCgyxFEKxnFYxBifZNMYzxDPg6wV
+        Ycp8pHB9qFxv3Q18kjmTAWlhmib25zQU2lh4iP3O3y3e7+rUe1o+FfwAfF5j
+        k2QBAAA=
+    http_version: !binary |-
+      MS4x
+  recorded_at: Tue, 04 Dec 2012 13:53:42 GMT
+- request:
+    method: get
+    uri: http://soulpancake.com/post/1607/whats-your-beautiful-mess.html
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Mechanize/2.5.1 Ruby/1.9.3p125 (http://github.com/tenderlove/mechanize/)
+      accept-encoding:
+      - gzip,deflate,identity
+      accept-charset:
+      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
+      accept-language:
+      - en-us,en;q=0.5
+      host:
+      - !binary |-
+        c291bHBhbmNha2UuY29t
+      connection:
+      - keep-alive
+      keep-alive:
+      - 300
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-encoding:
+      - gzip
+      content-type:
+      - text/html
+      date:
+      - Tue, 04 Dec 2012 13:52:55 GMT
+      server:
+      - Apache/2.2.22 (Ubuntu)
+      set-cookie:
+      - sp_session=a%3A4%3A%7Bs%3A10%3A%22session_id%22%3Bs%3A32%3A%22a6b80b9e34353bb30e3fe971e8b47b10%22%3Bs%3A10%3A%22ip_address%22%3Bs%3A12%3A%2210.255.3.229%22%3Bs%3A10%3A%22user_agent%22%3Bs%3A50%3A%22Mechanize%2F2.5.1+Ruby%2F1.9.3p125+%28http%3A%2F%2Fgithub.com%2F%22%3Bs%3A13%3A%22last_activity%22%3Bs%3A10%3A%221354629175%22%3B%7D415bd3b6645aba93878f80a24af1ce50;
+        expires=Tue, 04-Dec-2012 21:52:55 GMT; path=/
+      - sp_session=a%3A5%3A%7Bs%3A10%3A%22session_id%22%3Bs%3A32%3A%22a6b80b9e34353bb30e3fe971e8b47b10%22%3Bs%3A10%3A%22ip_address%22%3Bs%3A12%3A%2210.255.3.229%22%3Bs%3A10%3A%22user_agent%22%3Bs%3A50%3A%22Mechanize%2F2.5.1+Ruby%2F1.9.3p125+%28http%3A%2F%2Fgithub.com%2F%22%3Bs%3A13%3A%22last_activity%22%3Bs%3A10%3A%221354629175%22%3Bs%3A12%3A%22last_section%22%3Bs%3A5%3A%22other%22%3B%7D302ae9380f64fbeec8e24ba0f6b762b1;
+        expires=Tue, 04-Dec-2012 21:52:55 GMT; path=/
+      - !binary |-
+        c3Bfc2Vzc2lvbj1hJTNBNiUzQSU3QnMlM0ExMCUzQSUyMnNlc3Npb25faWQl
+        MjIlM0JzJTNBMzIlM0ElMjJhNmI4MGI5ZTM0MzUzYmIzMGUzZmU5NzFlOGI0
+        N2IxMCUyMiUzQnMlM0ExMCUzQSUyMmlwX2FkZHJlc3MlMjIlM0JzJTNBMTIl
+        M0ElMjIxMC4yNTUuMy4yMjklMjIlM0JzJTNBMTAlM0ElMjJ1c2VyX2FnZW50
+        JTIyJTNCcyUzQTUwJTNBJTIyTWVjaGFuaXplJTJGMi41LjErUnVieSUyRjEu
+        OS4zcDEyNSslMjhodHRwJTNBJTJGJTJGZ2l0aHViLmNvbSUyRiUyMiUzQnMl
+        M0ExMyUzQSUyMmxhc3RfYWN0aXZpdHklMjIlM0JzJTNBMTAlM0ElMjIxMzU0
+        NjI5MTc1JTIyJTNCcyUzQTEyJTNBJTIybGFzdF9zZWN0aW9uJTIyJTNCcyUz
+        QTUlM0ElMjJvdGhlciUyMiUzQnMlM0ExNiUzQSUyMnByZXZpb3VzX3NlY3Rp
+        b24lMjIlM0JzJTNBMCUzQSUyMiUyMiUzQiU3RGQ1MzY1NTA3Nzg1YjlhNzMy
+        ZmY1MjE0NGZjNTgxNzljOyBleHBpcmVzPVR1ZSwgMDQtRGVjLTIwMTIgMjE6
+        NTI6NTUgR01UOyBwYXRoPS8=
+      !binary "dmFyeQ==":
+      - !binary |-
+        QWNjZXB0LUVuY29kaW5n
+      !binary "eC1wb3dlcmVkLWJ5":
+      - !binary |-
+        UEhQLzUuMy4xMC0xdWJ1bnR1My40
+      !binary "Y29udGVudC1sZW5ndGg=":
+      - !binary |-
+        MjA=
+      !binary "Y29ubmVjdGlvbg==":
+      - !binary |-
+        a2VlcC1hbGl2ZQ==
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAwMAAAAAAAAAAAA=
+    http_version: '1.1'
+  recorded_at: Tue, 04 Dec 2012 13:53:42 GMT
+recorded_with: VCR 2.3.0

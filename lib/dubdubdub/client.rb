@@ -19,7 +19,7 @@ class DubDubDub::Client
         unless DubDubDub.configuration.ignore_proxy?
           proxy = DubDubDub.configuration.proxy
 
-          raise DubDubDub::Exception, "No proxy has been configured or provided!" if proxy.nil?
+          raise ArgumentError, "No proxy has been configured or provided!" if proxy.nil?
 
           self.proxy = proxy
         end
@@ -47,7 +47,7 @@ class DubDubDub::Client
   end
 
   def proxy?
-    return false if DubDubDub.configuration.ignore_proxy
+    return false if DubDubDub.configuration.ignore_proxy?
 
     !!proxy
   end
@@ -109,7 +109,11 @@ class DubDubDub::Client
 
   # Helper method to browse by using a GET request via Mechanize
   def browse(url, *args)
-    mechanize.get(url, *args)
+    handle_net_http_exceptions do
+      handle_mechanize_exceptions do
+        mechanize.get(url, *args)
+      end
+    end
   end
 
   # Follow a url to the end until it can no longer go any further
@@ -180,6 +184,7 @@ class DubDubDub::Client
         return url  # Just return it
       end
 
+      binding.pry
       urls << url
 
       break if at_base
@@ -193,9 +198,34 @@ class DubDubDub::Client
     # If there is no host, it's due to a relative 301 redirect. Use previous uri's host, port, etc
     if !end_uri.host and previous_uri
       end_uri = previous_uri
+      binding.pry
       end_uri.path = url
     end
 
     end_uri.to_s
+  end
+
+  # Follow a URL to the end
+  def follow(url)
+    browse(url).uri.to_s
+  end
+
+  private
+  def handle_net_http_exceptions(&block)
+    begin
+      yield
+    rescue Timeout::Error, Errno::ETIMEDOUT, Errno::EHOSTUNREACH
+      raise DubDubDub::ResponseError.new(e, 408)  # Timeout
+    rescue SocketError, EOFError => e
+      raise DubDubDub::ResponseError.new(e, 404)  # Not found
+    end
+  end
+
+  def handle_mechanize_exceptions(&block)
+    begin
+      yield
+    rescue Mechanize::ResponseCodeError => e
+      raise DubDubDub::ResponseError.new(e, e.response_code)
+    end
   end
 end

@@ -57,7 +57,7 @@ describe DubDubDub do
         config.proxy = nil
       end
 
-      lambda { DubDubDub.new(proxy: true) }.should raise_error(DubDubDub::Exception)
+      lambda { DubDubDub.new(proxy: true) }.should raise_error(ArgumentError)
     end
 
     it "doesn't raise an error if configured to ignore proxies and we have specified to use a global proxy that hasn't been set" do
@@ -66,7 +66,7 @@ describe DubDubDub do
         config.proxy = nil
       end
 
-      lambda { DubDubDub.new(proxy: true) }.should_not raise_error(DubDubDub::Exception)
+      lambda { DubDubDub.new(proxy: true) }.should_not raise_error(ArgumentError)
     end
 
     it "does not pass the method to client if that method doesn't exist within the client" do
@@ -187,78 +187,62 @@ describe DubDubDub do
     end
   end
 
-  describe '#follow_url' do
-    it "follows url to the end", vcr: { cassette_name: "follow_url/base", record: :once } do
-      www.follow_url("http://say.ly/TCc1CEp").should == "http://www.whosay.com/TomHanks/photos/148406"
-      www.follow_url("http://t.co//qbJx26r").should == "http://twitter.com/twitter/status/76360760606986241/photo/1"
-      www.follow_url("http://mypict.me/mMgLU").should == "http://mypict.me/mobile.php?id=336583610"
+  describe '#follow' do
+    it "follows url to the end", vcr: { cassette_name: "follow/base", record: :once } do
+      www.follow("http://say.ly/TCc1CEp").should == "http://www.whosay.com/TomHanks/photos/148406"
+      www.follow("http://t.co//qbJx26r").should == "http://twitter.com/twitter/status/76360760606986241/photo/1"
+      www.follow("http://mypict.me/mMgLU").should == "http://mypict.me/mobile.php?id=336583610"
     end
 
-    it "returns the base url if it meets a passed in block", vcr: { cassette_name: "follow_url/block_base_url", record: :once } do
-      www.follow_url("http://ow.ly/9Rp7p", until: lambda { |url| url =~ /ow\.ly/ }).should == "http://ow.ly/9Rp7p"
-      www.follow_url("http://ow.ly/9Rp7p", until: lambda { |url| url =~ /bit\.ly/ }).should == "http://bit.ly/GMx5lu"
-      www.follow_url("http://ow.ly/9Rp7p", until: lambda { |url| url =~ /bit\.lyyy/ }).should == "http://instagram.com/p/IbhSB6EKRQ/"
+    it "handles invalid uris", vcr: { cassette_name: "follow/invalid_uris", record: :once } do
+      lambda { www.follow("http://rank.1new.biz/sharp-紙パック式クリーナー-床用吸い込み口タイプ-オ/") }.should_not raise_error(DubDubDub::URLFormatError)
     end
 
-    it "can pass in a block to get the url every step of the way", vcr: { cassette_name: "follow_url/pass_block_iteration", record: :once } do
-      urls = []
+    it "handles https", vcr: { cassette_name: "follow/https", record: :once } do
+      lambda { www.follow("https://www.youtube.com/watch?v=DM58Zdk7el0&feature=youtube_gdata_player") }.should_not raise_error(EOFError)
+    end
 
-      www.follow_url("http://ow.ly/9Rp7p") do |url|
-        urls << url
+    it "raises an exception if doesn't exist", vcr: { cassette_name: "follow/doesnt_exist", record: :once } do
+      lambda { www.follow("http://cnnsadasdasdasdasdasd.com/asd") }.should raise_error(DubDubDub::ResponseError)
+
+      begin
+        www.follow("http://cnnsadasdasdasdasdasd.com/asd")
+      rescue DubDubDub::ResponseError => e
+        e.code.should == 404
+        e.error.should_not be_nil
+        e.message.should_not be_nil
       end
-
-      urls.first.should == "http://ow.ly/9Rp7p"   # first url should be the initial one
-      urls.count.should == 4
     end
 
-    it "can pass in a block with the last url being the base url", vcr: { cassette_name: "follow_url/pass_block", record: :once } do
-      urls = []
-
-      www.follow_url("http://twitpic.com/92a2p5") do |url|
-        urls << url
-      end
-
-      urls.count.should == 1
-      urls.last.should == "http://twitpic.com/92a2p5"
+    it "returns actual asset link for an alias link", vcr: { cassette_name: "follow/alias_link", record: :once } do
+      www.follow("http://yfrog.us/evlb0z:medium").should == "http://img535.imageshack.us/img535/9845/lb0.mp4"
     end
 
-    it "handles invalid uris", vcr: { cassette_name: "follow_url/invalid_uris", record: :once } do
-      lambda { www.follow_url("http://rank.1new.biz/sharp-紙パック式クリーナー-床用吸い込み口タイプ-オ/") }.should_not raise_error(URI::InvalidURIError)
-      www.follow_url("http://rank.1new.biz/sharp-紙パック式クリーナー-床用吸い込み口タイプ-オ/").should == "http://rank.1new.biz/sharp-紙パック式クリーナー-床用吸い込み口タイプ-オ/"
+    it "does not raise a EOFError", vcr: { cassette_name: "follow/eoferror", record: :once } do
+      lambda { www.follow("http://www.soulpancake.com/post/1607/whats-your-beautiful-mess.html") }.should_not raise_error
     end
 
-    it "handles https", vcr: { cassette_name: "follow_url/https", record: :once } do
-      lambda { www.follow_url("https://www.youtube.com/watch?v=DM58Zdk7el0&feature=youtube_gdata_player") }.should_not raise_error(EOFError)
-    end
-
-    it "raises an exception if doesn't exist", vcr: { cassette_name: "follow_url/doesnt_exist", record: :once } do
-      lambda { www.follow_url("http://cnnsadasdasdasdasdasd.com/asd") }.should raise_error(DubDubDub::NotFound)
-    end
-
-    it "returns actual asset link for an alias link", vcr: { cassette_name: "follow_url/alias_link", record: :once } do
-      www.follow_url("http://yfrog.us/evlb0z:medium").should == "http://img535.imageshack.us/img535/9845/lb0.mp4"
-    end
-
-    it "does not raise a EOFError", vcr: { cassette_name: "follow_url/eoferror", record: :once } do
-      lambda { www.follow_url("http://www.soulpancake.com/post/1607/whats-your-beautiful-mess.html") }.should_not raise_error
-    end
-
-    it 'works with a proxy', vcr: { cassette_name: "follow_url/proxy", record: :once } do
+    it 'works with a proxy', vcr: { cassette_name: "follow/proxy", record: :once } do
       www.proxy = "198.154.114.100:8080"
-      www.follow_url("http://yfrog.us/evlb0z:medium").should == "http://img535.imageshack.us/img535/9845/lb0.mp4"
+      www.follow("http://yfrog.us/evlb0z:medium").should == "http://img535.imageshack.us/img535/9845/lb0.mp4"
     end
 
-    it 'works for domains', vcr: { cassette_name: "follow_url/domains", record: :once } do
-      www.follow_url("google.com").should == "google.com"
+    it "works with relative path redirects", vcr: { cassette_name: "follow/relative_redirects", record: :once } do
+      www.follow("http://www.retailmenot.com/out/4223117").should == "http://www.papajohns.com/index.html"
     end
 
-    it "works with relative path redirects", vcr: { cassette_name: "follow_url/relative_redirects", record: :once } do
-      www.follow_url("http://www.retailmenot.com/out/4223117").should == "http://www.papajohns.com/index.html"
-    end
-
-    it "raises forbidden properly on a bad proxy", vcr: { cassette_name: "follow_url/proxy_forbidden", record: :once } do
+    it "raises response error on a bad proxy", vcr: { cassette_name: "follow/proxy_forbidden", record: :once } do
       www.proxy = "190.202.116.101:3128"
-      lambda { www.follow_url("http://yfrog.us/evlb0z:medium").should }.should raise_error(DubDubDub::Forbidden)
+      lambda { www.follow("http://yfrog.us/evlb0z:medium").should }.should raise_error(DubDubDub::ResponseError)
+    end
+
+    it "follows to the end for some types of urls", vcr: { cassette_name: "follow/all_the_way", record: :once } do
+      www.follow("http://www.apmebf.com/fo122tenm4/elq/32A39898/4432424/2/2/2").should == "http://www.bedbathandbeyond.com/default.asp?utm_source=WhaleShark+Media%3A+RetailMeNot%2Ecom&utm_medium=affiliate&utm_term=&utm_campaign=Bed+Bath+and+Beyond+Product+Catalog&aid=10817676&pid=2210202&sid=&"
+    end
+
+    it "handles doesn't error out due to URI", vcr: { cassette_name: "follow/uri_error", record: :once } do
+      url = www.follow "http://retailmenot.com/out/4231224"
+      url.should == "http://www.toysrus.com/category/index.jsp?categoryId=3999911"
     end
   end
 end

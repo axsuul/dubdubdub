@@ -1,0 +1,364 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://retailmenot.com/out/4231224
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      date:
+      - Tue, 04 Dec 2012 12:54:33 GMT
+      server:
+      - UltraDNS Client Redirection Server
+      last-modified:
+      - Tue, 04 Dec 2012 12:54:33 GMT
+      accept-ranges:
+      - none
+      connection:
+      - close
+      content-type:
+      - text/html
+      location:
+      - http://www.retailmenot.com/out/4231224
+    body:
+      encoding: US-ASCII
+      string: ! "\r\n"
+    http_version: '1.1'
+  recorded_at: Tue, 04 Dec 2012 12:54:33 GMT
+- request:
+    method: get
+    uri: http://www.retailmenot.com/out/4231224
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      content-type:
+      - text/html; charset=utf-8
+      date:
+      - Tue, 04 Dec 2012 12:55:07 GMT
+      location:
+      - http://www.pntrac.com/t/8-8340-1369-57062?sid=uuu9BCB984F-4B7F-D340-892D-121AC58B5F24
+      server:
+      - nginx
+      set-cookie:
+      - cid=deleted; expires=Mon, 05-Dec-2011 12:54:33 GMT; path=/; domain=retailmenot.com
+      - ppage=deleted; expires=Mon, 05-Dec-2011 12:54:33 GMT; path=/; domain=retailmenot.com
+      - ouid=deleted; expires=Mon, 05-Dec-2011 12:54:33 GMT; path=/; domain=retailmenot.com
+      - ut=17408; expires=Tue, 18-Dec-2012 12:54:34 GMT; path=/; domain=retailmenot.com
+      - userFlashVersion=FwvdzYZTL9; expires=Sun, 03-Dec-2017 12:54:34 GMT; path=/;
+        domain=retailmenot.com
+      vary:
+      - Accept-Encoding
+      content-length:
+      - '0'
+      connection:
+      - Close
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: '1.1'
+  recorded_at: Tue, 04 Dec 2012 12:54:34 GMT
+- request:
+    method: get
+    uri: http://www.pntrac.com/t/8-8340-1369-57062?sid=uuu9BCB984F-4B7F-D340-892D-121AC58B5F24
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      date:
+      - Tue, 04 Dec 2012 12:54:34 GMT
+      server:
+      - Apache/2.2.9
+      expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      last-modified:
+      - Tue, 04 Dec 2012 12:54:34 GMT
+      cache-control:
+      - no-store, no-cache, must-revalidate
+      - post-check=0, pre-check=0
+      pragma:
+      - no-cache
+      location:
+      - http://www.pepperjamnetwork.com/tracking/cookie.php?data=REZJTE1IREdHTEhGSElNSEZGRg&tarurl=http%3A%2F%2Fwww.toysrus.com%2Fentry.point%3Fentry%3D3999911%26source%3DPJ_AD%3A3999911%3ATRUS%26affiliateId%3D1369%26clickId%3D514495356%26affiliateCustomId%3Duuu9BCB984F-4B7F-D340-892D-121AC58B5F24
+      vary:
+      - Accept-Encoding
+      content-length:
+      - '0'
+      connection:
+      - close
+      content-type:
+      - text/html
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: '1.1'
+  recorded_at: Tue, 04 Dec 2012 12:54:34 GMT
+- request:
+    method: get
+    uri: http://www.pepperjamnetwork.com/tracking/cookie.php?data=REZJTE1IREdHTEhGSElNSEZGRg&tarurl=http%3A%2F%2Fwww.toysrus.com%2Fentry.point%3Fentry%3D3999911%26source%3DPJ_AD%3A3999911%3ATRUS%26affiliateId%3D1369%26clickId%3D514495356%26affiliateCustomId%3Duuu9BCB984F-4B7F-D340-892D-121AC58B5F24
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      date:
+      - Tue, 04 Dec 2012 12:54:34 GMT
+      server:
+      - Apache/2.2.9
+      expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      last-modified:
+      - Tue, 04 Dec 2012 12:54:34 GMT
+      cache-control:
+      - no-store, no-cache, must-revalidate
+      - post-check=0, pre-check=0
+      pragma:
+      - no-cache
+      p3p:
+      - CP="NOI ADM DEV PSAi COM NAV OUR OTRo STP IND DEM"
+      set-cookie:
+      - pjn_cookie_5333=514495356%253A1369; expires=Tue, 04-Dec-2012 17:54:34 GMT;
+        path=/; domain=.pepperjamnetwork.com
+      - pjn_session_5333=514495356%253A1369; path=/; domain=.pepperjamnetwork.com
+      location:
+      - http://www.toysrus.com/entry.point?entry=3999911&source=PJ_AD:3999911:TRUS&affiliateId=1369&clickId=514495356&affiliateCustomId=uuu9BCB984F-4B7F-D340-892D-121AC58B5F24
+      vary:
+      - Accept-Encoding
+      content-length:
+      - '0'
+      connection:
+      - close
+      content-type:
+      - text/html
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: '1.1'
+  recorded_at: Tue, 04 Dec 2012 12:54:35 GMT
+- request:
+    method: get
+    uri: http://www.toysrus.com/entry.point?entry=3999911&source=PJ_AD:3999911:TRUS&affiliateId=1369&clickId=514495356&affiliateCustomId=uuu9BCB984F-4B7F-D340-892D-121AC58B5F24
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      server:
+      - Apache/2.0.64 (Unix)
+      location:
+      - http://www.toysrus.com/entry.jsp?entry=3999911&source=PJ_AD:3999911:TRUS&affiliateId=1369&clickId=514495356&affiliateCustomId=uuu9BCB984F-4B7F-D340-892D-121AC58B5F24
+      content-length:
+      - '389'
+      content-type:
+      - text/html; charset=iso-8859-1
+      date:
+      - Tue, 04 Dec 2012 12:54:35 GMT
+      connection:
+      - close
+      set-cookie:
+      - StackLocation=hcsprd;path=/;
+    body:
+      encoding: US-ASCII
+      string: ! '<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+
+        <html><head>
+
+        <title>301 Moved Permanently</title>
+
+        </head><body>
+
+        <h1>Moved Permanently</h1>
+
+        <p>The document has moved <a href="http://www.toysrus.com/entry.jsp?entry=3999911&amp;source=PJ_AD:3999911:TRUS&amp;affiliateId=1369&amp;clickId=514495356&amp;affiliateCustomId=uuu9BCB984F-4B7F-D340-892D-121AC58B5F24">here</a>.</p>
+
+        </body></html>
+
+'
+    http_version: '1.1'
+  recorded_at: Tue, 04 Dec 2012 12:54:35 GMT
+- request:
+    method: get
+    uri: http://www.toysrus.com/entry.jsp?entry=3999911&source=PJ_AD:3999911:TRUS&affiliateId=1369&clickId=514495356&affiliateCustomId=uuu9BCB984F-4B7F-D340-892D-121AC58B5F24
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Moved Temporarily
+    headers:
+      server:
+      - Apache/2.0.64 (Unix)
+      cache-control:
+      - no-cache="set-cookie"
+      pragma:
+      - no-cache
+      location:
+      - http://www.toysrus.com/category/index.jsp?categoryId=3999911&clickId=514495356&affiliateCustomId=uuu9BCB984F-4B7F-D340-892D-121AC58B5F24&affiliateId=1369
+      p3p:
+      - CP="PHY ONL CAO CURa ADMa DEVa TAIa PSAa PSDa IVAo IVDo CONo HISa TELo OTPo
+        OUR DELa STP BUS UNI COM NAV INT DEM OTC",policyref="/w3c/p3p.xml"
+      x-powered-by:
+      - Servlet/2.5 JSP/2.1
+      vary:
+      - Accept-Encoding
+      content-encoding:
+      - gzip
+      x-ua-compatible:
+      - IE=EmulateIE7
+      content-type:
+      - text/html; charset=ISO-8859-1
+      date:
+      - Tue, 04 Dec 2012 12:54:35 GMT
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      - Transfer-Encoding
+      set-cookie:
+      - orso_code_honor=PJ_AD:3999911:TRUS; expires=Thursday, 01-Jan-1970 01:00:00
+        GMT; path=/
+      - browser_id=177009120004; expires=Friday, 02-Dec-2022 12:54:35 GMT; path=/
+      - orso_code_honor=PJ_AD:3999911:TRUS; expires=Thursday, 01-Jan-1970 01:00:00
+        GMT; path=/
+      - browser_id=177009120024; expires=Friday, 02-Dec-2022 12:54:35 GMT; path=/
+      - JSESSIONID=7xKcQ9yLwWgGqpy5Fdc4ZgxV7ZLCthdQr872sD8ShvvpJGlLfWvm!-1158548499;
+        path=/
+      - orso_code_honor=PJ_AD:3999911:TRUS; expires=Thursday, 01-Jan-1970 01:00:00
+        GMT; path=/
+      - browser_id=177009120034; expires=Friday, 02-Dec-2022 12:54:35 GMT; path=/
+      - !binary |-
+        UGVwcGVySmFtX1JlZmVycmFsPVBKX0FEOjM5OTk5MTE6VFJVUzoxMzY5OnV1
+        dTlCQ0I5ODRGLTRCN0YtRDM0MC04OTJELTEyMUFDNThCNUYyNDo1MTQ0OTUz
+        NTY6MTIwNDIwMTI6MDc1NDM1QU07IGV4cGlyZXM9V2VkbmVzZGF5LCAwMy1B
+        cHItMjAxMyAxMjo1NDozNSBHTVQ7IHBhdGg9Lw==
+      - !binary |-
+        U3RhY2tMb2NhdGlvbj1oY3NwcmQ7cGF0aD0vOw==
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA9VSy26DMBC8R8o/WFRqT+DwSqE1rgoRUg695QccMMEtxtRe
+        l/L3BaKo6id0jjM7o9XOkhZkR0nLWU0JCOg4DXcBelNfvEYnLgelmRbdRPBV
+        JHgd3W7IWdUTOl8q1SmdOXflCmdRBnpqhUG1qqzkPaBJWaT5p+UG5tCWGSTX
+        ePiN9wgertYjPBjUqxExQIShVvMmc1qA4QnjcRw9UJPR1niVkrhiwC9KT1j0
+        Nf/23s3wcqOOdRamM3z/nsnhuepE9TFzsR9FaRzG+5VlTSM6MTsKa0DJWbfW
+        pnmRp0lUulH+WLqHMNq5SRocXD/wX4s4yeMyiP66Z58f7lOH/os1CWb0dm68
+        lLh0ujzBdvMDZvi0SA0CAAA=
+    http_version: '1.1'
+  recorded_at: Tue, 04 Dec 2012 12:54:35 GMT
+- request:
+    method: get
+    uri: http://www.toysrus.com/category/index.jsp?categoryId=3999911&clickId=514495356&affiliateCustomId=uuu9BCB984F-4B7F-D340-892D-121AC58B5F24&affiliateId=1369
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 301
+      message: !binary |-
+        TW92ZWQgUGVybWFuZW50bHk=
+    headers:
+      !binary "c2VydmVy":
+      - !binary |-
+        QXBhY2hlLzIuMC42NCAoVW5peCk=
+      !binary "Y2FjaGUtY29udHJvbA==":
+      - !binary |-
+        bm8tY2FjaGU9InNldC1jb29raWUi
+      !binary "bG9jYXRpb24=":
+      - !binary |-
+        L2NhdGVnb3J5L2luZGV4LmpzcD9jYXRlZ29yeUlkPTM5OTk5MTE=
+      !binary "eC1wb3dlcmVkLWJ5":
+      - !binary |-
+        U2VydmxldC8yLjUgSlNQLzIuMQ==
+      !binary "dmFyeQ==":
+      - !binary |-
+        QWNjZXB0LUVuY29kaW5n
+      !binary "Y29udGVudC1lbmNvZGluZw==":
+      - !binary |-
+        Z3ppcA==
+      !binary "eC11YS1jb21wYXRpYmxl":
+      - !binary |-
+        SUU9RW11bGF0ZUlFNw==
+      !binary "Y29udGVudC1sZW5ndGg=":
+      - !binary |-
+        MjA=
+      !binary "Y29udGVudC10eXBl":
+      - !binary |-
+        dGV4dC9odG1sOyBjaGFyc2V0PUlTTy04ODU5LTE=
+      !binary "ZGF0ZQ==":
+      - !binary |-
+        VHVlLCAwNCBEZWMgMjAxMiAxMjo1NDozNiBHTVQ=
+      !binary "Y29ubmVjdGlvbg==":
+      - !binary |-
+        Y2xvc2U=
+      !binary "c2V0LWNvb2tpZQ==":
+      - !binary |-
+        SlNFU1NJT05JRD1RVmh2UTl5TVdYa2dQVlFjQzBUc2YyNU1QcVg2VGhucG1m
+        WVNjMWhHdmhyWG0xdnY5OUdXITk2NTkxOTI2NjsgcGF0aD0v
+      - !binary |-
+        YnJvd3Nlcl9pZD0xNzcwMDkxMjAwOTQ7IGV4cGlyZXM9RnJpZGF5LCAwMi1E
+        ZWMtMjAyMiAxMjo1NDozNiBHTVQ7IHBhdGg9Lw==
+      - !binary |-
+        U3RhY2tMb2NhdGlvbj1oY3NwcmQ7cGF0aD0vOw==
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAwMAAAAAAAAAAAA=
+    http_version: !binary |-
+      MS4x
+  recorded_at: Tue, 04 Dec 2012 12:54:36 GMT
+recorded_with: VCR 2.3.0

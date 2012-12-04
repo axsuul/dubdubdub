@@ -1,0 +1,334 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://ow.ly/9Rp7p
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Mechanize/2.5.1 Ruby/1.9.3p125 (http://github.com/tenderlove/mechanize/)
+      accept-encoding:
+      - gzip,deflate,identity
+      accept-charset:
+      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
+      accept-language:
+      - en-us,en;q=0.5
+      host:
+      - ow.ly
+      connection:
+      - keep-alive
+      keep-alive:
+      - 300
+  response:
+    status:
+      code: 301
+      message: !binary |-
+        TW92ZWQgUGVybWFuZW50bHk=
+    headers:
+      !binary "ZGF0ZQ==":
+      - !binary |-
+        VHVlLCAwNCBEZWMgMjAxMiAxMzo1MzozNiBHTVQ=
+      !binary "c2VydmVy":
+      - !binary |-
+        QXBhY2hl
+      !binary "eC1wb3dlcmVkLWJ5":
+      - !binary |-
+        UEhQLzUuMi40LTJ1YnVudHU1LjY=
+      !binary "c2V0LWNvb2tpZQ==":
+      - !binary |-
+        T1dMWVNJRD04MTk3MjJiNjA1MDA2ZjYzYWMyMGE1MzZkNmZiYzBkYjJlZDBm
+        MDMxOyBwYXRoPS8=
+      !binary "ZXhwaXJlcw==":
+      - !binary |-
+        VGh1LCAxOSBOb3YgMTk4MSAwODo1MjowMCBHTVQ=
+      !binary "Y2FjaGUtY29udHJvbA==":
+      - !binary |-
+        bm8tc3RvcmUsIG5vLWNhY2hlLCBtdXN0LXJldmFsaWRhdGUsIHBvc3QtY2hl
+        Y2s9MCwgcHJlLWNoZWNrPTA=
+      !binary "cHJhZ21h":
+      - !binary |-
+        bm8tY2FjaGU=
+      !binary "bG9jYXRpb24=":
+      - !binary |-
+        aHR0cDovL2JpdC5seS9HTXg1bHU=
+      !binary "eC1ncmlkbnVt":
+      - !binary |-
+        MjY=
+      !binary "dmFyeQ==":
+      - !binary |-
+        QWNjZXB0LUVuY29kaW5n
+      !binary "Y29udGVudC1lbmNvZGluZw==":
+      - !binary |-
+        Z3ppcA==
+      !binary "Y29udGVudC1sZW5ndGg=":
+      - !binary |-
+        MjA=
+      !binary "Y29ubmVjdGlvbg==":
+      - !binary |-
+        Y2xvc2U=
+      !binary "Y29udGVudC10eXBl":
+      - !binary |-
+        dGV4dC9odG1s
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAwMAAAAAAAAAAAA=
+    http_version: !binary |-
+      MS4x
+  recorded_at: Tue, 04 Dec 2012 13:53:36 GMT
+- request:
+    method: get
+    uri: http://bit.ly/GMx5lu
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Mechanize/2.5.1 Ruby/1.9.3p125 (http://github.com/tenderlove/mechanize/)
+      accept-encoding:
+      - gzip,deflate,identity
+      accept-charset:
+      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
+      accept-language:
+      - en-us,en;q=0.5
+      host:
+      - !binary |-
+        Yml0Lmx5
+      connection:
+      - keep-alive
+      keep-alive:
+      - 300
+  response:
+    status:
+      code: 301
+      message: Moved
+    headers:
+      server:
+      - nginx
+      date:
+      - Tue, 04 Dec 2012 13:53:36 GMT
+      content-type:
+      - text/html; charset=utf-8
+      connection:
+      - keep-alive
+      set-cookie:
+      - _bit=50be0060-002d8-0512f-281cf10a;domain=.bit.ly;expires=Sun Jun  2 13:53:36
+        2013;path=/; HttpOnly
+      cache-control:
+      - private; max-age=90
+      location:
+      - http://instagr.am/p/IbhSB6EKRQ/
+      mime-version:
+      - '1.0'
+      content-length:
+      - '123'
+    body:
+      encoding: US-ASCII
+      string: ! '<html>
+
+        <head>
+
+        <title>bit.ly</title>
+
+        </head>
+
+        <body>
+
+        <a href="http://instagr.am/p/IbhSB6EKRQ/">moved here</a>
+
+        </body>
+
+        </html>'
+    http_version: '1.1'
+  recorded_at: Tue, 04 Dec 2012 13:53:36 GMT
+- request:
+    method: get
+    uri: http://instagr.am/p/IbhSB6EKRQ/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Mechanize/2.5.1 Ruby/1.9.3p125 (http://github.com/tenderlove/mechanize/)
+      accept-encoding:
+      - gzip,deflate,identity
+      accept-charset:
+      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
+      accept-language:
+      - en-us,en;q=0.5
+      host:
+      - instagr.am
+      connection:
+      - keep-alive
+      keep-alive:
+      - 300
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      content-type:
+      - text/html
+      date:
+      - Tue, 04 Dec 2012 13:53:37 GMT
+      location:
+      - http://instagram.com/p/IbhSB6EKRQ/
+      server:
+      - nginx
+      content-length:
+      - '178'
+      connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! "<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body
+        bgcolor=\"white\">\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n"
+    http_version: '1.1'
+  recorded_at: Tue, 04 Dec 2012 13:53:37 GMT
+- request:
+    method: get
+    uri: http://instagram.com/p/IbhSB6EKRQ/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Mechanize/2.5.1 Ruby/1.9.3p125 (http://github.com/tenderlove/mechanize/)
+      accept-encoding:
+      - gzip,deflate,identity
+      accept-charset:
+      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
+      accept-language:
+      - en-us,en;q=0.5
+      host:
+      - instagram.com
+      connection:
+      - keep-alive
+      keep-alive:
+      - 300
+  response:
+    status:
+      code: 200
+      message: !binary |-
+        T0s=
+    headers:
+      !binary "YWNjZXB0LXJhbmdlcw==":
+      - !binary |-
+        Ynl0ZXM=
+      !binary "YWdl":
+      - !binary |-
+        MA==
+      !binary "Y29udGVudC1lbmNvZGluZw==":
+      - !binary |-
+        Z3ppcA==
+      !binary "Y29udGVudC1sYW5ndWFnZQ==":
+      - !binary |-
+        ZW4=
+      !binary "Y29udGVudC10eXBl":
+      - !binary |-
+        dGV4dC9odG1s
+      !binary "ZGF0ZQ==":
+      - !binary |-
+        VHVlLCAwNCBEZWMgMjAxMiAxMzo1MzozNyBHTVQ=
+      !binary "c2VydmVy":
+      - !binary |-
+        bmdpbng=
+      !binary "dmFyeQ==":
+      - !binary |-
+        QWNjZXB0LUxhbmd1YWdlLCBDb29raWUsIEFjY2VwdC1FbmNvZGluZw==
+      !binary "dmlh":
+      - !binary |-
+        MS4xIHZhcm5pc2g=
+      !binary "eC1mcmFtZS1vcHRpb25z":
+      - !binary |-
+        U0FNRU9SSUdJTg==
+      !binary "eC12YXJuaXNo":
+      - !binary |-
+        MjA3NDkzMzc5NQ==
+      !binary "Y29udGVudC1sZW5ndGg=":
+      - !binary |-
+        MjgzOQ==
+      !binary "Y29ubmVjdGlvbg==":
+      - !binary |-
+        a2VlcC1hbGl2ZQ==
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        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
+        hjIAAA==
+    http_version: !binary |-
+      MS4x
+  recorded_at: Tue, 04 Dec 2012 13:53:37 GMT
+recorded_with: VCR 2.3.0
