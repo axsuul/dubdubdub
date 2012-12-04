@@ -46,6 +46,8 @@ class DubDubDub::Client
   end
 
   def proxy?
+    return false if DubDubDub.configuration.ignore_proxies
+
     !!proxy
   end
 

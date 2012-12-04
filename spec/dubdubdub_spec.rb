@@ -103,6 +103,15 @@ describe DubDubDub do
       agent.proxy_addr.should == "localhost"
       agent.proxy_port.should == 8000
     end
+
+    it "ignores proxy if configured" do
+      DubDubDub.configuration.ignore_proxies = true
+
+      www.proxy = "localhost:8000"
+      agent = www.mechanize
+      agent.proxy_addr.should be_nil
+      agent.proxy_port.should be_nil
+    end
   end
 
   describe '#get' do
