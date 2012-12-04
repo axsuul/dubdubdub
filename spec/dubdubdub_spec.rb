@@ -31,9 +31,38 @@ describe DubDubDub do
       www.proxy_port.should == 80
     end
 
+    it "can specify to use a random proxy from list of proxies set" do
+      proxies = ["localhost:8000", "localhost:4000", "12.12.12.12:3000"]
+      DubDubDub.proxies = proxies
+
+      www = DubDubDub.new(proxy: true)
+      www.should be_proxy
+
+      proxies.include?(www.proxy).should be_true
+    end
+
+    it "raises an error if we have specified to use a proxy from the list but there are none" do
+      DubDubDub.proxies = []
+      lambda { DubDubDub.new(proxy: true) }.should raise_error(DubDubDub::Exception)
+
+      DubDubDub.proxies = nil
+      lambda { DubDubDub.new(proxy: true) }.should raise_error(DubDubDub::Exception)
+    end
+
     it "does not pass the method to client if that method doesn't exist within the client" do
       www = DubDubDub.new
       lambda { www.some_method_that_doesnt_exist }.should raise_error(NameError)
+    end
+  end
+
+  describe '::proxies' do
+    it "is nil by default" do
+      DubDubDub.proxies.should be_nil
+    end
+
+    it "can be set" do
+      DubDubDub.proxies = ["localhost:8000"]
+      DubDubDub.proxies.should be == ["localhost:8000"]
     end
   end
 

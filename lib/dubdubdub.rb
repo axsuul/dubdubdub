@@ -1,8 +1,12 @@
 class DubDubDub
   # Version
-  VERSION = "0.2.0"
+  VERSION = "0.2.1"
 
   attr_accessor :client
+
+  class << self
+    attr_accessor :proxies
+  end
 
   def initialize(options = {})
     @client = DubDubDub::Client.new(options)

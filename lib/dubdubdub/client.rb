@@ -6,7 +6,27 @@ class DubDubDub::Client
   attr_accessor :proxy_host, :proxy_port, :proxy_user, :proxy_password
 
   def initialize(options = {})
-    self.proxy = options[:proxy] if options[:proxy]
+    default_options = {
+      proxy: false
+    }
+
+    options = default_options.merge(options)
+
+    # If we want to use a proxy
+    if options[:proxy]
+      # If true and we have a proxy list, use a random one from the list
+      # or ignore and don't use a proxy at all
+      if options[:proxy] == true
+        if DubDubDub.proxies and DubDubDub.proxies.is_a?(Array) and DubDubDub.proxies.any?
+          self.proxy = DubDubDub.proxies.sample
+        else
+          raise DubDubDub::Exception, "No proxies have been specified!"
+        end
+      # Otherwise, it should be a proxy url
+      else
+        self.proxy = options[:proxy]
+      end
+    end
   end
 
   def proxy_port=(port)
