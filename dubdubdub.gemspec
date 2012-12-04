@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "dubdubdub"
-  s.version = "0.2.0"
+  s.version = "0.2.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["James Hu"]
-  s.date = "2012-12-03"
+  s.date = "2012-12-04"
   s.description = "A library that provides web utility methods with proxification."
   s.email = "axsuul@gmail.com"
   s.extra_rdoc_files = [
@@ -26,6 +26,7 @@ Gem::Specification.new do |s|
     "dubdubdub.gemspec",
     "lib/dubdubdub.rb",
     "lib/dubdubdub/client.rb",
+    "lib/dubdubdub/configuration.rb",
     "lib/dubdubdub/exceptions.rb",
     "spec/dubdubdub_spec.rb",
     "spec/spec_helper.rb",
