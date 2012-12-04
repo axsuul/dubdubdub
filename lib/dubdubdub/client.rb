@@ -118,6 +118,7 @@ class DubDubDub::Client
     options = default_options.merge(options)
 
     at_base = false
+    previous_uri = nil  # Keep track of previous uri for relative path redirects
     response = nil
     user_agents = [
       'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.79 Safari/535.11',
@@ -172,16 +173,28 @@ class DubDubDub::Client
         end
 
       # If any of these exceptions get thrown, return the current url
-      rescue SocketError, URI::InvalidURIError, EOFError
+      rescue SocketError, EOFError
         at_base = true
+      rescue URI::InvalidURIError
+        return url  # Just return it
       end
 
       urls << url
 
       break if at_base
+
+      previous_uri = uri   # Keep track of previous uri
       yield(url) if block_given?
     end
 
-    url
+    end_uri = URI.parse(url)
+
+    # If there is no host, it's due to a relative 301 redirect. Use previous uri's host, port, etc
+    if !end_uri.host and previous_uri
+      end_uri = previous_uri
+      end_uri.path = url
+    end
+
+    end_uri.to_s
   end
 end

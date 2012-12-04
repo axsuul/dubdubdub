@@ -230,6 +230,10 @@ describe DubDubDub do
       www.follow_url("google.com").should == "google.com"
     end
 
+    it "works with relative path redirects", vcr: { cassette_name: "follow_url/relative_redirects", record: :once } do
+      www.follow_url("http://www.retailmenot.com/out/4223117").should == "http://www.papajohns.com/index.html"
+    end
+
     it "raises forbidden properly on a bad proxy", vcr: { cassette_name: "follow_url/proxy_forbidden", record: :once } do
       www.proxy = "190.202.116.101:3128"
       lambda { www.follow_url("http://yfrog.us/evlb0z:medium").should }.should raise_error(DubDubDub::Forbidden)
