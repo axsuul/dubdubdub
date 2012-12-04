@@ -25,7 +25,7 @@ www = DubDubDub.new
 www.crawl "http://google.com"
 
 # Uses mechanize and returns a Mechanize::Page
-www.browse "http://google.com
+www.browse "http://google.com"
 
 # Follows and returns the end URL
 www.follow "http://bit.ly/abcdefg"
