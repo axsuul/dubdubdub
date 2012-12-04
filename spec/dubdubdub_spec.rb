@@ -226,6 +226,10 @@ describe DubDubDub do
       www.follow_url("http://yfrog.us/evlb0z:medium").should == "http://img535.imageshack.us/img535/9845/lb0.mp4"
     end
 
+    it 'works for domains', vcr: { cassette_name: "follow_url/domains", record: :once } do
+      www.follow_url("google.com").should == "google.com"
+    end
+
     it "raises forbidden properly on a bad proxy", vcr: { cassette_name: "follow_url/proxy_forbidden", record: :once } do
       www.proxy = "190.202.116.101:3128"
       lambda { www.follow_url("http://yfrog.us/evlb0z:medium").should }.should raise_error(DubDubDub::Forbidden)

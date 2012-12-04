@@ -53,7 +53,7 @@ class DubDubDub::Client
 
   # Returns a Net::HTTP object
   def net_http(uri)
-    raise ArgumentError unless uri.is_a? URI::HTTP
+    raise ArgumentError, "A URI must be provided!" unless uri.kind_of? URI::Generic
 
     net_http_class = if proxy?
       Net::HTTP.Proxy(proxy_host, proxy_port, proxy_user, proxy_password)
