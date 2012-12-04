@@ -14,14 +14,15 @@ class DubDubDub::Client
 
     # If we want to use a proxy
     if options[:proxy]
-      # If true and we have a proxy list, use a random one from the list
-      # or ignore and don't use a proxy at all
+      # If true, refer to global proxy config
       if options[:proxy] == true
-        if DubDubDub.proxies and DubDubDub.proxies.is_a?(Array) and DubDubDub.proxies.any?
-          self.proxy = DubDubDub.proxies.sample
-        else
-          raise DubDubDub::Exception, "No proxies have been specified!" unless DubDubDub.configuration.ignore_proxy
+        proxy = DubDubDub.configuration.proxy
+
+        if proxy.nil? and !DubDubDub.configuration.ignore_proxy
+          raise DubDubDub::Exception, "No proxy has been configured or provided!"
         end
+
+        self.proxy = proxy
       # Otherwise, it should be a proxy url
       else
         self.proxy = options[:proxy]

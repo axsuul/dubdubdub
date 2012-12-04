@@ -31,27 +31,31 @@ describe DubDubDub do
       www.proxy_port.should == 80
     end
 
-    it "can specify to use a random proxy from list of proxies set" do
-      proxies = ["localhost:8000", "localhost:4000", "12.12.12.12:3000"]
-      DubDubDub.proxies = proxies
+    it "can configure to use a proxy globally" do
+      DubDubDub.configure do |config|
+        config.proxy = "localhost:8000"
+      end
 
       www = DubDubDub.new(proxy: true)
       www.should be_proxy
-
-      proxies.include?(www.proxy).should be_true
+      www.proxy.should == "localhost:8000"
     end
 
-    it "raises an error if we have specified to use a proxy from the list but there are none" do
-      DubDubDub.proxies = []
-      lambda { DubDubDub.new(proxy: true) }.should raise_error(DubDubDub::Exception)
+    it "raises an error if we have specified to use a proxy but none has been set globally" do
+      DubDubDub.configure do |config|
+        config.ignore_proxy = false
+        config.proxy = nil
+      end
 
-      DubDubDub.proxies = nil
       lambda { DubDubDub.new(proxy: true) }.should raise_error(DubDubDub::Exception)
     end
 
-    it "doesn't raise an error if configured to ignore proxies and we have specified to use a proxy from the list but there are none" do
-      DubDubDub.configuration.ignore_proxy = true
-      DubDubDub.proxies = nil
+    it "doesn't raise an error if configured to ignore proxies and we have specified to use a global proxy that hasn't been set" do
+      DubDubDub.configure do |config|
+        config.ignore_proxy = true
+        config.proxy = nil
+      end
+
       lambda { DubDubDub.new(proxy: true) }.should_not raise_error(DubDubDub::Exception)
     end
 
@@ -68,6 +72,7 @@ describe DubDubDub do
 
     it "has default config values" do
       DubDubDub.configuration.ignore_proxy.should be_false
+      DubDubDub.configuration.proxy.should be_nil
     end
   end
 
@@ -93,16 +98,23 @@ describe DubDubDub do
 
       DubDubDub.configuration.ignore_proxy.should be_true
     end
-  end
 
-  describe '::proxies' do
-    it "is nil by default" do
-      DubDubDub.proxies.should be_nil
+    it "can pass a string to proxy config" do
+      DubDubDub.configure do |config|
+        config.proxy = "localhost:8000"
+      end
+
+      DubDubDub.configuration.proxy.should == "localhost:8000"
     end
 
-    it "can be set" do
-      DubDubDub.proxies = ["localhost:8000"]
-      DubDubDub.proxies.should be == ["localhost:8000"]
+    it "can pass a block to proxy config with the block being called when accessing it" do
+      DubDubDub.configure do |config|
+        config.proxy do
+          "localhost:8000"
+        end
+      end
+
+      DubDubDub.configuration.proxy.should == "localhost:8000"
     end
   end
 

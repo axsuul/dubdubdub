@@ -4,10 +4,6 @@ class DubDubDub
 
   attr_accessor :client
 
-  class << self
-    attr_accessor :proxies
-  end
-
   def self.configure
     yield(configuration)
   end
