@@ -78,11 +78,13 @@ class DubDubDub::ResponseError < DubDubDub::Error
     @code = code.to_i
   end
 
-  def message
+  def status_message
     STATUSES[code.to_i]
   end
 
   def to_s
-    "#{code}: #{message} => #{error.class.name}: #{error.message}"
+    "#{code}: #{status_message} => #{error.class.name}: #{error.message}"
   end
+
+  alias :message :to_s
 end
