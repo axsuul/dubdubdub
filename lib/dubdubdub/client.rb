@@ -1,6 +1,7 @@
 require 'net/http'
 require 'nokogiri'
 require 'mechanize'
+require 'rest-client'
 
 class DubDubDub::Client
   attr_accessor :proxy_host, :proxy_port, :proxy_user, :proxy_password
