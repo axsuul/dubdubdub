@@ -47,6 +47,7 @@ Gem::Specification.new do |s|
     "spec/vcr/follow/uri_error.yml",
     "spec/vcr/get/basic.yml",
     "spec/vcr/get/doesnt_exist.yml",
+    "spec/vcr/get/infinite_redirects.yml",
     "spec/vcr/get/params.yml",
     "spec/vcr/get/proxy.yml"
   ]
