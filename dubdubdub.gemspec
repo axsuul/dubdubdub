@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["James Hu"]
-  s.date = "2012-12-23"
+  s.date = "2013-01-24"
   s.description = "A library that provides web utility methods with proxification."
   s.email = "axsuul@gmail.com"
   s.extra_rdoc_files = [
@@ -38,6 +38,7 @@ Gem::Specification.new do |s|
     "spec/vcr/follow/base.yml",
     "spec/vcr/follow/eoferror.yml",
     "spec/vcr/follow/https.yml",
+    "spec/vcr/follow/invalid_uris.yml",
     "spec/vcr/follow/pass_block.yml",
     "spec/vcr/follow/pass_block_iteration.yml",
     "spec/vcr/follow/proxy.yml",
@@ -45,6 +46,7 @@ Gem::Specification.new do |s|
     "spec/vcr/follow/relative_redirects.yml",
     "spec/vcr/follow/uri_error.yml",
     "spec/vcr/get/basic.yml",
+    "spec/vcr/get/doesnt_exist.yml",
     "spec/vcr/get/params.yml",
     "spec/vcr/get/proxy.yml"
   ]
