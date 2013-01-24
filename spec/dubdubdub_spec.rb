@@ -174,6 +174,18 @@ describe DubDubDub do
 
       html.css('.ip').text.strip.should == "173.234.181.64"
     end
+
+    it "raises an exception if it doesn't exist", vcr: { cassette_name: "get/doesnt_exist", record: :all } do
+      lambda { www.get("https://github.com/asdasd/asdasd") }.should raise_error(DubDubDub::ResponseError)
+
+      begin
+        www.get("https://github.com/asdasd/asdasd")
+      rescue DubDubDub::ResponseError => e
+        e.code.should == 404
+        e.error.should_not be_nil
+        e.message.should_not be_nil
+      end
+    end
   end
 
   describe '#crawl' do

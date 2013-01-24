@@ -71,17 +71,23 @@ class DubDubDub::Client
 
   # Perform a GET request
   def get(url, *args)
-    rest_client_resource(url).get(*args)
+    handle_rest_client_exceptions do
+      rest_client_resource(url).get(*args)
+    end
   end
 
   # Perform a POST request
   def post(url, *args)
-    rest_client_resource(url).post(*args)
+    handle_rest_client_exceptions do
+      rest_client_resource(url).post(*args)
+    end
   end
 
   # Perform a DELETE request
   def delete(url, *args)
-    rest_client_resource(url).delete(*args)
+    handle_rest_client_exceptions do
+      rest_client_resource(url).delete(*args)
+    end
   end
 
   # Helper method to crawl by using a GET request via RestClient
@@ -122,5 +128,14 @@ class DubDubDub::Client
     rescue Mechanize::ResponseCodeError => e
       raise DubDubDub::ResponseError.new(e, e.response_code)
     end
+  end
+
+  def handle_rest_client_exceptions(&block)
+    begin
+      yield
+    rescue RestClient::Exception => e
+      raise DubDubDub::ResponseError.new(e, e.response.code)
+    end
+
   end
 end
