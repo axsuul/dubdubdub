@@ -175,7 +175,7 @@ describe DubDubDub do
       html.css('.ip').text.strip.should == "173.234.181.64"
     end
 
-    it "raises an exception if it doesn't exist", vcr: { cassette_name: "get/doesnt_exist", record: :all } do
+    it "raises an exception if it doesn't exist", vcr: { cassette_name: "get/doesnt_exist", record: :once } do
       lambda { www.get("https://github.com/asdasd/asdasd") }.should raise_error(DubDubDub::ResponseError)
 
       begin
@@ -185,6 +185,10 @@ describe DubDubDub do
         e.error.should_not be_nil
         e.message.should_not be_nil
       end
+    end
+
+    it "raise the proper exception when exceeding maximum redirects", vcr: { cassette_name: "get/infinite_redirects", record: :once } do
+      lambda { www.get("http://wayback.archive.org/web/20050204085854im_/http://www.drpep.com/images/home_19.gif") }.should raise_error(DubDubDub::RedirectLimitReachedError)
     end
   end
 

@@ -3,6 +3,9 @@ class DubDubDub::Error < RuntimeError; end
 # URL not properly formatted
 class DubDubDub::URLFormatError < DubDubDub::Error; end
 
+# Redirect limit reached
+class DubDubDub::RedirectLimitReachedError < DubDubDub::Error; end
+
 # There was an unhandled response. Contains
 # a reference to the originating error.
 class DubDubDub::ResponseError < DubDubDub::Error

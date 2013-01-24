@@ -1,0 +1,412 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://wayback.archive.org/web/20050204085854im_/http://www.drpep.com/images/home_19.gif
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*; q=0.5, application/xml'
+      accept-encoding:
+      - gzip, deflate
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Moved Temporarily
+    headers:
+      server:
+      - Tengine/1.3.0
+      date:
+      - Thu, 24 Jan 2013 03:03:50 GMT
+      content-type:
+      - image/gif
+      connection:
+      - keep-alive
+      set-cookie:
+      - wayback_server=94;Domain=archive.org;Expires=Sat, 23-Feb-13 03:03:50 GMT;
+      location:
+      - /web/20110715052543im_/http://drpep.com/images/home_19.gif
+      content-length:
+      - '0'
+      x-page-cache:
+      - MISS
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: '1.1'
+  recorded_at: Thu, 24 Jan 2013 03:03:50 GMT
+- request:
+    method: get
+    uri: http://wayback.archive.org/web/20110715052543im_/http:/drpep.com/images/home_19.gif
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*; q=0.5, application/xml'
+      accept-encoding:
+      - gzip, deflate
+      cookie:
+      - Domain=archive.org; Expires=Sat; wayback_server=94
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Moved Temporarily
+    headers:
+      server:
+      - Tengine/1.3.0
+      date:
+      - Thu, 24 Jan 2013 03:03:51 GMT
+      connection:
+      - keep-alive
+      location:
+      - /web/20110721121019im_/http://drpep.com/images/home_19.gif
+      content-length:
+      - '0'
+      x-page-cache:
+      - MISS
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: '1.1'
+  recorded_at: Thu, 24 Jan 2013 03:03:51 GMT
+- request:
+    method: get
+    uri: http://wayback.archive.org/web/20110721121019im_/http:/drpep.com/images/home_19.gif
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*; q=0.5, application/xml'
+      accept-encoding:
+      - gzip, deflate
+      cookie:
+      - Domain=archive.org; Expires=Sat; wayback_server=94
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Moved Temporarily
+    headers:
+      server:
+      - Tengine/1.3.0
+      date:
+      - Thu, 24 Jan 2013 03:03:51 GMT
+      connection:
+      - keep-alive
+      location:
+      - /web/20110715052543im_/http://drpep.com/images/home_19.gif
+      content-length:
+      - '0'
+      x-page-cache:
+      - MISS
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: '1.1'
+  recorded_at: Thu, 24 Jan 2013 03:03:51 GMT
+- request:
+    method: get
+    uri: http://wayback.archive.org/web/20110715052543im_/http:/drpep.com/images/home_19.gif
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*; q=0.5, application/xml'
+      accept-encoding:
+      - gzip, deflate
+      cookie:
+      - Domain=archive.org; Expires=Sat; wayback_server=94
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Moved Temporarily
+    headers:
+      server:
+      - Tengine/1.3.0
+      date:
+      - Thu, 24 Jan 2013 03:03:51 GMT
+      connection:
+      - keep-alive
+      location:
+      - /web/20110721121019im_/http://drpep.com/images/home_19.gif
+      content-length:
+      - '0'
+      x-page-cache:
+      - HIT
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: '1.1'
+  recorded_at: Thu, 24 Jan 2013 03:03:51 GMT
+- request:
+    method: get
+    uri: http://wayback.archive.org/web/20110721121019im_/http:/drpep.com/images/home_19.gif
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*; q=0.5, application/xml'
+      accept-encoding:
+      - gzip, deflate
+      cookie:
+      - Domain=archive.org; Expires=Sat; wayback_server=94
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Moved Temporarily
+    headers:
+      server:
+      - Tengine/1.3.0
+      date:
+      - Thu, 24 Jan 2013 03:03:51 GMT
+      connection:
+      - keep-alive
+      location:
+      - /web/20110715052543im_/http://drpep.com/images/home_19.gif
+      content-length:
+      - '0'
+      x-page-cache:
+      - HIT
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: '1.1'
+  recorded_at: Thu, 24 Jan 2013 03:03:51 GMT
+- request:
+    method: get
+    uri: http://wayback.archive.org/web/20110715052543im_/http:/drpep.com/images/home_19.gif
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*; q=0.5, application/xml'
+      accept-encoding:
+      - gzip, deflate
+      cookie:
+      - Domain=archive.org; Expires=Sat; wayback_server=94
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Moved Temporarily
+    headers:
+      server:
+      - Tengine/1.3.0
+      date:
+      - Thu, 24 Jan 2013 03:03:51 GMT
+      connection:
+      - keep-alive
+      location:
+      - /web/20110721121019im_/http://drpep.com/images/home_19.gif
+      content-length:
+      - '0'
+      x-page-cache:
+      - HIT
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: '1.1'
+  recorded_at: Thu, 24 Jan 2013 03:03:51 GMT
+- request:
+    method: get
+    uri: http://wayback.archive.org/web/20110721121019im_/http:/drpep.com/images/home_19.gif
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*; q=0.5, application/xml'
+      accept-encoding:
+      - gzip, deflate
+      cookie:
+      - Domain=archive.org; Expires=Sat; wayback_server=94
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Moved Temporarily
+    headers:
+      server:
+      - Tengine/1.3.0
+      date:
+      - Thu, 24 Jan 2013 03:03:51 GMT
+      connection:
+      - keep-alive
+      location:
+      - /web/20110715052543im_/http://drpep.com/images/home_19.gif
+      content-length:
+      - '0'
+      x-page-cache:
+      - HIT
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: '1.1'
+  recorded_at: Thu, 24 Jan 2013 03:03:51 GMT
+- request:
+    method: get
+    uri: http://wayback.archive.org/web/20110715052543im_/http:/drpep.com/images/home_19.gif
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*; q=0.5, application/xml'
+      accept-encoding:
+      - gzip, deflate
+      cookie:
+      - Domain=archive.org; Expires=Sat; wayback_server=94
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Moved Temporarily
+    headers:
+      server:
+      - Tengine/1.3.0
+      date:
+      - Thu, 24 Jan 2013 03:03:52 GMT
+      connection:
+      - keep-alive
+      location:
+      - /web/20110721121019im_/http://drpep.com/images/home_19.gif
+      content-length:
+      - '0'
+      x-page-cache:
+      - HIT
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: '1.1'
+  recorded_at: Thu, 24 Jan 2013 03:03:52 GMT
+- request:
+    method: get
+    uri: http://wayback.archive.org/web/20110721121019im_/http:/drpep.com/images/home_19.gif
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*; q=0.5, application/xml'
+      accept-encoding:
+      - gzip, deflate
+      cookie:
+      - Domain=archive.org; Expires=Sat; wayback_server=94
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Moved Temporarily
+    headers:
+      server:
+      - Tengine/1.3.0
+      date:
+      - Thu, 24 Jan 2013 03:03:52 GMT
+      connection:
+      - keep-alive
+      location:
+      - /web/20110715052543im_/http://drpep.com/images/home_19.gif
+      content-length:
+      - '0'
+      x-page-cache:
+      - HIT
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: '1.1'
+  recorded_at: Thu, 24 Jan 2013 03:03:52 GMT
+- request:
+    method: get
+    uri: http://wayback.archive.org/web/20110715052543im_/http:/drpep.com/images/home_19.gif
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*; q=0.5, application/xml'
+      accept-encoding:
+      - gzip, deflate
+      cookie:
+      - Domain=archive.org; Expires=Sat; wayback_server=94
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Moved Temporarily
+    headers:
+      server:
+      - Tengine/1.3.0
+      date:
+      - Thu, 24 Jan 2013 03:03:52 GMT
+      connection:
+      - keep-alive
+      location:
+      - /web/20110721121019im_/http://drpep.com/images/home_19.gif
+      content-length:
+      - '0'
+      x-page-cache:
+      - HIT
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: '1.1'
+  recorded_at: Thu, 24 Jan 2013 03:03:52 GMT
+- request:
+    method: get
+    uri: http://wayback.archive.org/web/20110721121019im_/http:/drpep.com/images/home_19.gif
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*; q=0.5, application/xml'
+      accept-encoding:
+      - gzip, deflate
+      cookie:
+      - Domain=archive.org; Expires=Sat; wayback_server=94
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Moved Temporarily
+    headers:
+      server:
+      - Tengine/1.3.0
+      date:
+      - Thu, 24 Jan 2013 03:03:52 GMT
+      connection:
+      - keep-alive
+      location:
+      - /web/20110715052543im_/http://drpep.com/images/home_19.gif
+      content-length:
+      - '0'
+      x-page-cache:
+      - HIT
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: '1.1'
+  recorded_at: Thu, 24 Jan 2013 03:03:52 GMT
+recorded_with: VCR 2.3.0
