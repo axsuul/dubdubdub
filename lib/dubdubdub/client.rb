@@ -115,7 +115,7 @@ class DubDubDub::Client
   def handle_net_http_exceptions(&block)
     begin
       yield
-    rescue Timeout::Error, Errno::ETIMEDOUT, Errno::EHOSTUNREACH
+    rescue Timeout::Error, Errno::ETIMEDOUT, Errno::EHOSTUNREACH => e
       raise DubDubDub::ResponseError.new(e, 408)  # Timeout
     rescue SocketError, EOFError => e
       raise DubDubDub::ResponseError.new(e, 404)  # Not found
@@ -125,7 +125,7 @@ class DubDubDub::Client
   def handle_mechanize_exceptions(&block)
     begin
       yield
-    rescue Mechanize::RedirectLimitReachedError
+    rescue Mechanize::RedirectLimitReachedError => e
       raise DubDubDub::RedirectLimitReachedError
     rescue Mechanize::ResponseCodeError => e
       raise DubDubDub::ResponseError.new(e, e.response_code)
@@ -135,12 +135,11 @@ class DubDubDub::Client
   def handle_rest_client_exceptions(&block)
     begin
       yield
-    rescue RestClient::MaxRedirectsReached
+    rescue RestClient::MaxRedirectsReached => e
       raise DubDubDub::RedirectLimitReachedError
     rescue RestClient::Exception => e
       code = e.response.code if e.response
       raise DubDubDub::ResponseError.new(e, code)
     end
-
   end
 end
