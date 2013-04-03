@@ -190,6 +190,29 @@ describe DubDubDub do
     it "raise the proper exception when exceeding maximum redirects", vcr: { cassette_name: "get/infinite_redirects", record: :once } do
       lambda { www.get("http://wayback.archive.org/web/20050204085854im_/http://www.drpep.com/images/home_19.gif") }.should raise_error(DubDubDub::RedirectLimitReachedError)
     end
+
+    it "raises proper timeout exception if it times out", vcr: { cassette_name: "get/timeout", record: :once } do
+      pending "Long running test, comment out to run it"
+      ip_address = "4.4.4.4"
+      lambda { www.get(ip_address) }.should raise_error(DubDubDub::ResponseError)
+
+      begin
+        www.get(ip_address)
+      rescue DubDubDub::ResponseError => e
+        e.code.should == 408
+      end
+    end
+
+    it "raises proper exception if domain doesn't resolve", vcr: { cassette_name: "get/domain_unresolvable", record: :once } do
+      domain = "balhblahlbal123123123123.com"
+      lambda { www.get(domain) }.should raise_error(DubDubDub::ResponseError)
+
+      begin
+        www.get(domain)
+      rescue DubDubDub::ResponseError => e
+        e.code.should == 404
+      end
+    end
   end
 
   describe '#crawl' do

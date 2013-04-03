@@ -99,10 +99,8 @@ class DubDubDub::Client
 
   # Helper method to browse by using a GET request via Mechanize
   def browse(url, *args)
-    handle_net_http_exceptions do
-      handle_mechanize_exceptions do
-        mechanize.get(url, *args)
-      end
+    handle_mechanize_exceptions do
+      mechanize.get(url, *args)
     end
   end
 
@@ -124,7 +122,7 @@ class DubDubDub::Client
 
   def handle_mechanize_exceptions(&block)
     begin
-      yield
+      handle_net_http_exceptions { yield }
     rescue Mechanize::RedirectLimitReachedError => e
       raise DubDubDub::RedirectLimitReachedError
     rescue Mechanize::ResponseCodeError => e
@@ -134,7 +132,7 @@ class DubDubDub::Client
 
   def handle_rest_client_exceptions(&block)
     begin
-      yield
+      handle_net_http_exceptions { yield }
     rescue RestClient::MaxRedirectsReached => e
       raise DubDubDub::RedirectLimitReachedError
     rescue RestClient::Exception => e
