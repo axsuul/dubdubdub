@@ -135,6 +135,8 @@ class DubDubDub::Client
       handle_net_http_exceptions { yield }
     rescue RestClient::MaxRedirectsReached => e
       raise DubDubDub::RedirectLimitReachedError
+    rescue RestClient::RequestTimeout => e
+      raise DubDubDub::ResponseError.new(e, 408)
     rescue RestClient::Exception => e
       code = e.response.code if e.response
       raise DubDubDub::ResponseError.new(e, code)
