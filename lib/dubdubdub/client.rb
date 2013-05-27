@@ -117,6 +117,8 @@ class DubDubDub::Client
       raise DubDubDub::ResponseError.new(e, 408)  # Timeout
     rescue SocketError, EOFError => e
       raise DubDubDub::ResponseError.new(e, 404)  # Not found
+    rescue Errno::ECONNREFUSED => e
+      raise DubDubDub::ResponseError.new(e, 502)  # Connection refused
     end
   end
 
