@@ -2,14 +2,14 @@ source "http://rubygems.org"
 
 gem 'rest-client', git: 'https://github.com/daveola/rest-client'
 gem 'nokogiri'
-gem 'mechanize'
+gem 'mechanize', '2.7.0'
 
 # Add dependencies to develop your gem here.
 # Include everything needed to run rake, tests, features, etc.
 group :development do
   gem "rspec", "~> 2.8.0"
   gem 'vcr', '~> 2.4.0'
-  gem 'webmock', '1.9.3'   # required for vcr
+  gem 'fakeweb'
   gem "bundler"
   gem "jeweler", "~> 1.8.4"
   gem 'pry'

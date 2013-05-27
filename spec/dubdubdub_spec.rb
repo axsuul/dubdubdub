@@ -286,5 +286,10 @@ describe DubDubDub do
       url = www.follow "http://retailmenot.com/out/4231224"
       url.should == "http://www.toysrus.com/category/index.jsp?categoryId=3999911"
     end
+
+    it "works for urls that raise bad request", vcr: { cassette_name: "follow/bad_request", record: :once } do
+      url = www.follow "http://web.archive.org/web/20110201164948cs_/https://dannyhopefootballcamps.com/styles.css"
+      url.should == "http://web.archive.org/web/20110201165404cs_/https://dannyhopefootballcamps.com/styles.css"
+    end
   end
 end

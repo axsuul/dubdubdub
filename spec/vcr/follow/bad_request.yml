@@ -1,0 +1,221 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://web.archive.org/web/20110201165404cs_/https:/dannyhopefootballcamps.com/styles.css
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip,deflate,identity
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Mechanize/2.6.0 Ruby/2.0.0p0 (http://github.com/sparklemotion/mechanize/)
+      Accept-Charset:
+      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
+      Accept-Language:
+      - en-us,en;q=0.5
+      Cookie:
+      - wayback_server=94
+      Host:
+      - web.archive.org
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - 300
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Server:
+      - Tengine/1.4.3
+      Date:
+      - Mon, 27 May 2013 19:07:44 GMT
+      Content-Type:
+      - text/html;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Archive-Wayback-Runtime-Error:
+      - 'BadQueryException: Bad URL(http://https:/dannyhopefootballcamps.com/styles.css)'
+      X-Archive-Wayback-Perf:
+      - '[, IndexQueryTotal: 0, , , , , , Total: 2, ]'
+      X-Archive-Playback:
+      - '0'
+    body:
+      encoding: UTF-8
+      string: "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<!DOCTYPE html>\n\n\n\n\n\n<!--
+        HEADER -->\n<html>\n\t<head>\n\t\t<title>Internet Archive Wayback Machine</title>\n\t\t<meta
+        http-equiv=\"content-type\" content=\"text/html; charset=utf-8\" />\n\t\t<link
+        rel=\"stylesheet\" type=\"text/css\" href=\"/static/css/styles.css\" />\n\t\t<base
+        target=\"_top\" />\n\t</head>\n\t<body>\n<!-- /HEADER -->\n\n\n        <div
+        id=\"positionHome\">\n            <section>\n            <div id=\"logoHome\">\n
+        \               <a href=\"/web/\"><h1><span>Internet Archive's Wayback Machine</span></h1></a>\n
+        \           </div>\n            </section>\n            <section>\n            <div
+        id=\"searchHome\">\n                <form name=\"form1\" method=\"get\" action=\"/web/form-submit.jsp\">\n\t\t
+        \   <input type=\"text\" name=\"url\" value=\"http://https:/dannyhopefootballcamps.com/styles.css\"
+        size=\"40\" onfocus=\"javascript:this.focus();this.select();\" >\n\t\t    <button
+        type=\"submit\" name=\"type\" value=\"replay\">Latest</button>\n\t\t    <button
+        type=\"submit\" name=\"type\" value=\"urlquery\">Show All</button>\n                </form>\n
+        \           </div>\n            </section>\n            <section>\n            <div
+        id=\"error\">\n\n                <h2>Eh?</h2>\n                <p>Sorry, that
+        doesn&apos;t look like an valid URL.</p>\n\n\n            </div>\n            </section>\n
+        \           <div id=\"errorBorder\"></div>\n\n\n\n\n\n<!-- FOOTER -->\n            <footer>\n
+        \           <div id=\"footerHome\">\n                <p>The Wayback Machine
+        is an initiative of the <a href=\"http://www.archive.org/\">Internet Archive</a>,
+        a 501(c)(3) non-profit, building a digital library of Internet sites and other
+        cultural artifacts in digital form.<br/>Other <a href=\"http://www.archive.org/projects/\">projects</a>
+        include <a href=\"http://www.openlibrary.org/\">Open Library</a> &amp; <a
+        href=\"http://www.archive-it.org\">archive-it.org</a>.</p>\n                <p>Your
+        use of the Wayback Machine is subject to the Internet Archive's <a href=\"http://www.archive.org/about/terms.php\">Terms
+        of Use</a>.</p>\n            </div>\n            </section>\n        </div>\n
+        \   </body>\n</html>\n<!-- /FOOTER -->\n\n"
+    http_version: 
+  recorded_at: Mon, 27 May 2013 19:07:53 GMT
+- request:
+    method: get
+    uri: http://web.archive.org/web/20110201164948cs_/https://dannyhopefootballcamps.com/styles.css
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip,deflate,identity
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Mechanize/2.7.0 Ruby/2.0.0p0 (http://github.com/sparklemotion/mechanize/)
+      Accept-Charset:
+      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
+      Accept-Language:
+      - en-us,en;q=0.5
+      Host:
+      - web.archive.org
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - 300
+  response:
+    status:
+      code: 302
+      message: Moved Temporarily
+    headers:
+      Server:
+      - Tengine/1.4.3
+      Date:
+      - Mon, 27 May 2013 19:12:04 GMT
+      Content-Type:
+      - text/css
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - wayback_server=94; Domain=archive.org; Path=/; Expires=Wed, 26-Jun-13 19:12:04
+        GMT;
+      Location:
+      - /web/20110201165404cs_/https://dannyhopefootballcamps.com/styles.css
+      X-Archive-Playback:
+      - '0'
+      X-Page-Cache:
+      - MISS
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Mon, 27 May 2013 19:12:14 GMT
+- request:
+    method: get
+    uri: http://web.archive.org/web/20110201165404cs_/https://dannyhopefootballcamps.com/styles.css
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip,deflate,identity
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Mechanize/2.7.0 Ruby/2.0.0p0 (http://github.com/sparklemotion/mechanize/)
+      Accept-Charset:
+      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
+      Accept-Language:
+      - en-us,en;q=0.5
+      Cookie:
+      - wayback_server=94
+      Host:
+      - web.archive.org
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - 300
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Tengine/1.4.3
+      Date:
+      - Mon, 27 May 2013 19:12:04 GMT
+      Content-Type:
+      - text/css;charset=UTF-8
+      Content-Length:
+      - '1646'
+      Connection:
+      - keep-alive
+      X-Archive-Guessed-Charset:
+      - UTF-8
+      X-Archive-Orig-Content-Length:
+      - '1353'
+      X-Archive-Orig-Connection:
+      - close
+      X-Archive-Orig-Content-Type:
+      - text/css
+      X-Archive-Orig-Accept-Ranges:
+      - bytes
+      X-Archive-Orig-Server:
+      - Apache
+      X-Archive-Orig-Last-Modified:
+      - Thu, 25 Mar 2010 12:27:32 GMT
+      X-Archive-Orig-Date:
+      - Tue, 01 Feb 2011 16:54:02 GMT
+      X-Archive-Orig-Vary:
+      - Accept-Encoding,User-Agent
+      X-Archive-Wayback-Perf:
+      - '[IndexLoad: 245, IndexQueryTotal: 245, , RobotsFetchTotal: 2, , RobotsRedis:
+        2, RobotsTotal: 2, Total: 350, WArcResource: 102]'
+      X-Archive-Playback:
+      - '1'
+      X-Page-Cache:
+      - MISS
+    body:
+      encoding: UTF-8
+      string: "\n\n\n\n\n/*\n     FILE ARCHIVED ON 16:54:04 Feb 1, 2011 AND RETRIEVED
+        FROM THE\n     INTERNET ARCHIVE ON 19:12:04 May 27, 2013.\n     JAVASCRIPT
+        APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.\n\n     ALL OTHER
+        CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.\n     SECTION 108(a)(3)).\n*/\n.content_text
+        {\n\tfont-family: Verdana, Helvetica, Arial, sans-serif;\n\tfont-size: 12px;\n\tcolor:
+        #646464;\n}\n\n.content_text a {\n\tcolor: #646464;\n\tfont-weight: bold;\n\ttext-decoration:
+        none;\n}\n.content_text a:hover {\n\ttext-decoration: underline;\n}\n\n.content_header
+        {\n\tfont-family: Verdana, Helvetica, Arial, sans-serif;\n\tfont-size: 16px;\n\tcolor:
+        #646464;\n\tfont-weight: bold;\n}\n\n.std_txt_input {\n\twidth: 200px;\n}\n\n.session_info
+        {\n\tfont-family: Verdana, Helvetica, Arial, sans-serif;\n\tfont-size: 12px;\n\tcolor:
+        #646464;\n}\n\n.reg_forms {\n\tfont-family: Verdana, Helvetica, Arial, sans-serif;\n\tfont-size:
+        12px;\n\tcolor: #646464;\n}\n.reg_forms table {\n\tfont-family: Verdana, Helvetica,
+        Arial, sans-serif;\n\tfont-size: 12px;\n\tcolor: #646464;\n\twidth: 100%;\n}\n.reg_forms
+        input {\n\twidth: 175px;\n}\n.reg_forms textarea {\n\twidth: 175px;\n}\n.reg_forms
+        select {\n\twidth: 175px;\n}\n\n.reg_cart_detail {\n\tfont-family: Verdana,
+        Helvetica, Arial, sans-serif;\n\tfont-size: 12px;\n\tcolor: #646464;\n}\n\n.reg_billing_info_form
+        {\n\tfont-family: Verdana, Helvetica, Arial, sans-serif;\n\tfont-size: 12px;\n\tcolor:
+        #646464;\n}\n.reg_billing_info_form table {\n\tfont-family: Verdana, Helvetica,
+        Arial, sans-serif;\n\tfont-size: 12px;\n\tcolor: #646464;\n}\n.reg_billing_info_form
+        input {\n\twidth: 175px;\n}\n.reg_billing_info_form textarea {\n\twidth: 175px;\n}\n\n\n\n.error_txt
+        {\n\tcolor: #FF0000;\n\tfont-weight: bold;\n}"
+    http_version: 
+  recorded_at: Mon, 27 May 2013 19:12:14 GMT
+recorded_with: VCR 2.4.0
