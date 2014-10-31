@@ -69,7 +69,7 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<vcr>, ["~> 2.4.0"])
       s.add_development_dependency(%q<fakeweb>, [">= 0"])
       s.add_development_dependency(%q<bundler>, [">= 0"])
-      s.add_development_dependency(%q<jeweler>, ["~> 1.8.4"])
+      s.add_development_dependency(%q<jeweler>, ["~> 2.0.1"])
       s.add_development_dependency(%q<pry>, [">= 0"])
     else
       s.add_dependency(%q<rest-client>, [">= 0"])
@@ -79,7 +79,7 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<vcr>, ["~> 2.4.0"])
       s.add_dependency(%q<fakeweb>, [">= 0"])
       s.add_dependency(%q<bundler>, [">= 0"])
-      s.add_dependency(%q<jeweler>, ["~> 1.8.4"])
+      s.add_dependency(%q<jeweler>, ["~> 2.0.1"])
       s.add_dependency(%q<pry>, [">= 0"])
     end
   else
@@ -90,7 +90,7 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<vcr>, ["~> 2.4.0"])
     s.add_dependency(%q<fakeweb>, [">= 0"])
     s.add_dependency(%q<bundler>, [">= 0"])
-    s.add_dependency(%q<jeweler>, ["~> 1.8.4"])
+    s.add_dependency(%q<jeweler>, ["~> 2.0.1"])
     s.add_dependency(%q<pry>, [">= 0"])
   end
 end
