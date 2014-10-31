@@ -1,6 +1,6 @@
 class DubDubDub
   # Version
-  VERSION = "0.3.8"
+  VERSION = "0.3.9"
 
   attr_accessor :client
 

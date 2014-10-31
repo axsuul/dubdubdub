@@ -2,7 +2,7 @@ source "http://rubygems.org"
 
 gem 'rest-client', git: 'https://github.com/daveola/rest-client'
 gem 'nokogiri'
-gem 'mechanize', '2.7.0'
+gem 'mechanize', '>= 2.7.0'
 
 # Add dependencies to develop your gem here.
 # Include everything needed to run rake, tests, features, etc.
