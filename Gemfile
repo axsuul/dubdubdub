@@ -11,6 +11,6 @@ group :development do
   gem 'vcr', '~> 2.4.0'
   gem 'fakeweb'
   gem "bundler"
-  gem "jeweler", "~> 1.8.4"
+  gem "jeweler", "~> 2.0.1"
   gem 'pry'
 end
