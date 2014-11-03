@@ -4,7 +4,10 @@ require 'mechanize'
 require 'rest-client'
 
 class DubDubDub::Client
-  attr_accessor :proxy_host, :proxy_port, :proxy_user, :proxy_password
+  attr_accessor :proxy_host,
+                :proxy_port,
+                :proxy_username,
+                :proxy_password
 
   def initialize(options = {})
     default_options = {
@@ -36,15 +39,24 @@ class DubDubDub::Client
   end
 
   def proxy=(url)
-    host, port = url.split(":")
+    matches = url.match(/(?:(?<username>[^\:]+)\:(?<password>[^\@]+)\@)?(?<host>[\.0-9]+|localhost)(?:\:(?<port>[0-9]+))?/)
 
-    port = 80 unless port
-    self.proxy_host = host
-    self.proxy_port = port
+    self.proxy_host = matches[:host]
+    self.proxy_port = matches[:port] || 80
+    self.proxy_username = matches[:username]
+    self.proxy_password = matches[:password]
   end
 
   def proxy
-    "#{proxy_host}:#{proxy_port}" if proxy_host and proxy_port
+    if proxy_host and proxy_port
+      address = "#{proxy_host}:#{proxy_port}"
+
+      if proxy_username and proxy_password
+        address.prepend("#{proxy_username}:#{proxy_password}@")
+      end
+    end
+
+    address
   end
 
   def proxy?

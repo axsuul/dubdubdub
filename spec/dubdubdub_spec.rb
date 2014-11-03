@@ -31,6 +31,17 @@ describe DubDubDub do
       www.proxy_port.should == 80
     end
 
+    it "can specify user and password for proxy" do
+      address = "user:pass@203.131.212.166:55555"
+
+      www = DubDubDub.new(proxy: address)
+      www.proxy_host.should == "203.131.212.166"
+      www.proxy_port.should == 55555
+      www.proxy_username.should == "user"
+      www.proxy_password.should == "pass"
+      www.proxy.should == address
+    end
+
     it "can configure to use a proxy globally" do
       DubDubDub.configure do |config|
         config.proxy = "localhost:8000"
